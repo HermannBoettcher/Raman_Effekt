@@ -72,7 +72,7 @@
 % Corporate Design der Universität Konstanz gebunden sind.
 
 %\usepackage{themeKonstanzXelatexAddOn} % XeLaTeX mit Schriftart Arial, VOR dem Standardpaket importieren
-\usepackage{themeKonstanz} % Muss immer verwendet werden (Standardpaket)
+\usepackage{sty/themeKonstanz} % Muss immer verwendet werden (Standardpaket)
 %\usepackage{themeKonstanzStyleAddOn} % Style Add-On für andere Überschriften, NACH dem Standardpaket importieren
 
 
@@ -133,14 +133,14 @@
 % Angaben dargestellt und verwendet. Außerdem benutzen die
 % Kopf- und Fusszeile diese Informationen (siehe weiter unten).
 
-\date{31.10.2018}
+\date{23.11.2018}
 \year{2018}
-\author{Hermann B\"ottcher \& Jannik Dornseiff}
-\title{Laserspektroskopie}
+\author{Hermann Böttcher \& Jannik Dornseiff}
+\title{Raman-Effekt}
 \subtitle{Untertitel des Dokuments}
 \unisection{Mathematisch-Naturwissenschaftlichen Sektion}
 \department{Fachbereich Physik}
-\supervisorOne{Timo Raab}
+\supervisorOne{Cornelius Beckh}
 
 
 
@@ -365,58 +365,6 @@
 %
 % erstellt werden.
 
-\begin{abstract}
-  In diesem Versuch wird ein Teil des Termschemas von $\mathrm{^{133}Cs}$ untersucht. Das Augenmerk liegt hierbei auf der Hyperfeinstruktur der Niveaus $6^2S_{1/2}$ und $6^2P_{3/2}$. Zu dessen Charakterisierung werden sowohl dopplerverbreiterte, als auch dopplerfreie Transmissionspektren einer C\"asiumgaskammer aufgenommen. Hierbei kommen ein Diodenlaser und außerdem, zu Zwecken der Kalibrierung, ein Fabry-Pert-Etalon zum Einsatz.
-
-  Zunächst wird die Linienbreite des Lasers zu $\SI{11,14(25)}{\mega\hertz}$ bestimmt. Der experimentell bestimmte Wert der Sekunde ist $\SI{0,90(1)}{\second}$. Das Termschema von C\"asium ergibt sich mit den Ergebnissen wie unten abgebildet.\\
-
-
-  \begin{centering}
-
-  \begin{tikzpicture}
-    % angeregte Niveaus
-    \node at (1,4.3) {$\mathrm{6^2P_{3/2}}$};
-    \draw[line width=1pt] (0,4)--(3,4);
-    \draw[line width=1pt] (5,6)--(8,6) node[anchor=west] {$\mathrm{F=5}$};
-    \draw[line width=1pt] (5,4.5)--(8,4.5) node[anchor=west] {$\mathrm{F=4}$};
-    \draw[line width=1pt] (5,3.5)--(8,3.5) node[anchor=west] {$\mathrm{F=3}$};
-    \draw[line width=1pt] (5,3)--(8,3) node[anchor=west] {$\mathrm{F=2}$};
-    \draw[dashed] (3,4)--(5,6);
-    \draw[dashed] (3,4)--(5,4.5);
-    \draw[dashed] (3,4)--(5,3.5);
-    \draw[dashed] (3,4)--(5,3);
-    % Grundzustand Niveaus
-    \node at (1,0.3) {$\mathrm{6^2S_{1/2}}$};
-    \draw[line width=1pt](0,0)--(3,0);
-    \draw[line width=1pt] (5,1)--(8,1) node[anchor=west] {$\mathrm{F=4}$};
-    \draw[line width=1pt] (5,-0.5)--(8,-0.5) node[anchor=west] {$\mathrm{F=3}$};
-    \draw[dashed] (3,0)--(5,1);
-    \draw[dashed] (3,0)--(5,-0.5);
-    % \"Uberg\"ange
-    % Unterer Grundzustand
-    \draw[color=red, ->] (5.25,-0.5)--(5.25,3);
-    \draw[color=red, ->] (5.75,-0.5)--(5.75,3.5);
-    \draw[color=red, ->] (6.25,-0.5)--(6.25,4.5);
-    % Oberer Grundzustand
-    \draw[color=red, ->] (6.75,1)--(6.75,3.5);
-    \draw[color=red, ->] (7.25,1)--(7.25,4.5);
-    \draw[color=red, ->] (7.75,1)--(7.75,6);
-    % Messwerte
-    \draw[<->] (9.5,-0.5)--(9.5,1);
-    \node at (11,0.25) {$\SI{10,19(2)}{\giga\hertz}$};
-    \draw[<->] (9.5,3)--(9.5,3.5);
-    \node at (11,3.25) {$\SI{199,5(37)}{\mega\hertz}$};
-    \draw[<->] (9.5,3.5)--(9.5,4.5);
-    \node at (11,4) {$\SI{218,6(31)}{\mega\hertz}$};
-    \draw[<->] (9.5,4.5)--(9.5,6);
-    \node at (11,5.25) {$\SI{287,5(47)}{\mega\hertz}$};
-    % Fein- und Hyperfeinstruktur
-    \draw [decorate,decoration={brace,mirror,amplitude=10pt}] (0,-0.8) -- (3,-0.8) node [black,midway,yshift=-14pt] {\footnotesize Feinstruktur};
-    \draw [decorate,decoration={brace,mirror,amplitude=10pt}] (5,-0.8) -- (8,-0.8) node [black,midway,yshift=-14pt] {\footnotesize Hyperfeinstruktur};
-  \end{tikzpicture}
-\end{centering}
-\end{abstract}
-
 \tableofcontents
 
 
@@ -497,12 +445,12 @@
 
 %\subfile{kapitel/physikalische_grundlagen.tex}
 \subfile{kapitel/einleitung.tex}
-\subfile{kapitel/versuch.tex}
+\subfile{kapitel/physikalische_grundlagen.tex}
 
 \printbibliography
 \addcontentsline{toc}{chapter}{Bibliographie}
 
-\subfile{kapitel/anhang.tex}
+%\subfile{kapitel/anhang.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ende vom Dokument                                     %
