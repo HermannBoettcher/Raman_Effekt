@@ -132,6 +132,29 @@
     \field{year}{1992}
   \endentry
 
+  \entry{schwingungsspek}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=MDC}{%
+         family={Merten},
+         familyi={M\bibinitperiod},
+         given={Dr.\bibnamedelima Christian},
+         giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MDC1}
+    \strng{fullhash}{MDC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Schwingungsspektroskopie}
+    \verb{url}
+    \verb http://www.ruhr-uni-bochum.de/chirality/mam/content/2_infrarot_teil1.
+    \verb pdf
+    \endverb
+    \field{year}{2018}
+  \endentry
+
   \entry{raman-ir}{misc}{}
     \name{author}{1}{}{%
       {{hash=PDM}{%
