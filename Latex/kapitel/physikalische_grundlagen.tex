@@ -38,12 +38,12 @@
         \end{equation}
         Mit $\phi$ als Winkel zwischen Einfalls- und Streurichtung erhält man nach einigen Umformungsschritten aus \cref{eq:energiesatz} und \cref{eq:impulssatz} die Compton-Streuformel:
         \begin{equation}
-          \lambda_S-\lambda_0=2\lambda_csin^2(\frac{\phi}{2}
+          \lambda_S-\lambda_0=2\lambda_c\sin^2 \left(\frac{\phi}{2}\right)
           \label{eq:streuformel}
         \end{equation}
         mit
         \begin{equation}
-          \lambda_c=\frac{h}{m_0c}=2.4262\cdot10^{-12}m
+          \lambda_c=\frac{h}{m_0c}=\SI{2,4262e-12}{\meter}
           \label{cwellenl}
         \end{equation}
         als Compton-Wellenlänge des Elektrons. Diese zeigt die Wellenlängenänderung $\Delta \lambda =\lambda_S -\lambda_0$ bei dem Streuwinkel $\phi=\pi/2$. \\
@@ -51,7 +51,7 @@
       \begin{equation*}
       \frac{\lambda_c}{\lambda_0}=\frac{h}{m_0c\lambda_0}=\frac{h\nu_0}{m_0c^2}
     \end{equation*}
-      Damit lässt sich durch Messung von $\lambda_S$ und $\phi$, bei bekanntem $m_0$, $\lambda_c$ und h bestimmen. Falls an etwas anderem als Elektronen gestreut wird, wie zum Beispiel Protonen oder Neutronen, kann, mit dem Literaturwert von h auch die Ruhemasse des Streuers bestimmt werden.\\
+      Damit lässt sich durch Messung von $\lambda_S$ und $\phi$, bei bekanntem $m_0$, $\lambda_c$ und $h$ bestimmen. Falls an etwas anderem als Elektronen gestreut wird, wie zum Beispiel Protonen oder Neutronen, kann, mit dem Literaturwert von $h$ auch die Ruhemasse des Streuers bestimmt werden.\\
       \cite{dem:exp3}
 
     \subsection{Rayleigh-Streuung}
@@ -64,14 +64,14 @@
         \label{eq:dipol}
       \end{equation}
       mit der Polarisierbarkeit $\alpha$. Damit Rayleigh-Streuung auftreten kann müssen die Streuer unregelmäßig verteilt sein, da eine fest Phasenbeziehung zwischen den Streuwellen und der einfallenden Strahlung besteht. Aus der zufälligen Verteilung der Streuer folgt die Inkohärenz des gestreuten Lichts. \\
-      Für den differentiellen Wirkungsquerschnitt der Rayleigh-Streuung, mit V als Gasvolumen, N als Teilchendichte, n($\lambda$) als Wellenlängen abhängiger Brechungsindex und $\theta$ als Streuwinkel, ergibt sich:
+      Für den differentiellen Wirkungsquerschnitt der Rayleigh-Streuung, mit $V$ als Gasvolumen, $N$ als Teilchendichte, $n(\lambda)$ als Wellenlängen abhängiger Brechungsindex und $\theta$ als Streuwinkel, ergibt sich
       \begin{equation}
-        \sigma(\theta)=\frac{2\pi^2 V}{N\lambda^4}(n^2(\lambda)-1)^2(1+cos^2\theta)
+        \sigma(\theta)=\frac{2\pi^2 V}{N\lambda^4}(n^2(\lambda)-1)^2(1+\cos^2\theta)
         \label{eq:streuquerschnitt}
       \end{equation}
       Hierbei ist die rechte Seite der Gleichung die Rayleighsche Streufunktion. \\
 
-      Die Streustrahlung besteht aus einem senkrecht ($i_1$) und einem parallel ($i_2$) polarisierten Anteil. $i_1$ ist proportional zur eins in der zweiten Klammer und $i_2$ ist proportional zu $cos^2\theta$. Damit ist $i_2=0$ für $\theta=\pi/2$, $3\pi/2$, daraus folgt, dass das Streulicht vollständig polarisiert ist. Demnach ist das Streulicht für $i_1=i_2$, bei $\theta=0$, $\pi$, unpolarisiert.
+      Die Streustrahlung besteht aus einem senkrecht ($i_1$) und einem parallel ($i_2$) polarisierten Anteil. $i_1$ ist proportional zur eins in der zweiten Klammer und $i_2$ ist proportional zu $\cos^2\theta$. Damit ist $i_2=0$ für $\theta=\pi/2$, $3\pi/2$, daraus folgt, dass das Streulicht vollständig polarisiert ist. Demnach ist das Streulicht für $i_1=i_2$, bei $\theta=0$, $\pi$, unpolarisiert.
 
       \begin{figure}[H]
         \begin{center}
@@ -83,27 +83,29 @@
           }
         \end{center}
       \end{figure}
-      Wenn ein unpolarisierter Strahl der Intensität $I_0$ und der Wellenlänge $\lambda$ auf ein Molekül trifft so gilt für die Intensität der gestreuten Strahlung:
+      Wenn ein unpolarisierter Strahl der Intensität $I_0$ und der Wellenlänge $\lambda$ auf ein Molekül trifft, so gilt für die Intensität der gestreuten Strahlung:
       \begin{equation}
-        I=I_0\frac{8\pi^4 \alpha^2}{\lambda^4 R^2}(1+cos^2\theta)
+        I=I_0\frac{8\pi^4 \alpha^2}{\lambda^4 R^2}(1+\cos^2\theta)
         \label{eq:rayleighi}
       \end{equation}
-      mit der Polarisierbarkeit $\alpha$, dem Streuwinkel $\theta$ und dem Abstand vom Streuer R.\\
-      Den totalen Streuquerschnitt erhält man indem man $\sigma(\theta)$ über alle Streurichtungen integriert. Wird dieser durch V dividiert folgt der Rayleighsche Streukoeffizient.
+      mit der Polarisierbarkeit $\alpha$, dem Streuwinkel $\theta$ und dem Abstand vom Streuer $R$.\\
+      Den totalen Streuquerschnitt erhält man indem man $\sigma(\theta)$ über alle Streurichtungen integriert. Wird dieser durch $V$ dividiert folgt der Rayleighsche Streukoeffizient.
       \begin{equation*}
         b=\frac{8\pi^3}{3N\lambda^4}[n^2(\lambda)-1]^2
       \end{equation*}
       Da die Streuintensität stark von $\lambda^{-4}$ abhängt wird blaues Licht ca. 10 mal stärker gebrochen als rotes Licht, was wie am Anfang erwähnt zur Färbung des Himmels führt.
+
       \cite{cosmos} \cite{wiki:rayleigh} \cite{spektrum:rayleigh}
 
     \subsection{Raman-Streuung}
     \label{ssec:Raman-Streuung}
 
-      Bei der Raman-Streuung findet nun ein inelastischer Streuprozess an Molekülen statt. Die Raman Streuung ist deutlich schwächer als die Rayleigh-Streuung erlaubt aber auch mehr Rückschlüsse auf die Struktur der Moleküle. Beim Raman-Effekt hebt ein Photon der Energie $\hbar \omega_0$ vom Anfangzustand $E_k$ in den höheren Zustand $E_i$. Das dabei gestreute Photon hat nun die Energie $\hbar \omega_s$. Damit gilt:
+      Bei der Raman-Streuung findet nun ein inelastischer Streuprozess an Molekülen statt. Die Raman-Streuung ist deutlich schwächer als die Rayleigh-Streuung, erlaubt aber auch mehr Rückschlüsse auf die Struktur der streuenden Moleküle. Beim Raman-Effekt hebt ein Photon der Energie $\hbar \omega_0$ ein im Streumolekül gebundenes Elektron vom Anfangzustand $E_k$ in den höheren Zustand $E_i$. Das dabei gestreute Photon hat nun die Energie $\hbar \omega_s$ und es gilt
       \begin{equation*}
         \Delta E= \hbar (\omega_0-\omega_s)=E_i-E_k
       \end{equation*}
-      Wird nun monochromatisches Licht auf die Molekülprobe gelenkt, sieht man in Spektrum noch andere Strahlungen, zusätzlich zur elastisch gestreuten Wellenlänge $\lambda_0$, der Rayleigh-Streuung. Die Stokes-Strahlung entsteht auf der langwelligen Seite von $\lambda_0$  durch Rotations-Schwingungs-Energiedifferenzen der Moleküle. Desweiteren entsteht auf der kurzwelligen Seite von $\lambda_0$ wenn die streuenden Moleküle bereits angeregt sind und in den Grundzustand zurückfallen, siehe und \cref{fig:oszillator}.
+      Wird nun monochromatisches Licht auf die Molekülprobe gelenkt, sieht man im Spektrum noch andere Strahlungen, zusätzlich zur elastisch gestreuten Wellenlänge $\lambda_0$, der Rayleigh-Streuung. Die Stokes-Strahlung entsteht auf der langwelligen Seite von $\lambda_0$  durch Rotations-Schwingungs-Energiedifferenzen der Moleküle. Des Weiteren entsteht Strahlung auf der kurzwelligen Seite von $\lambda_0$, wenn die streuenden Moleküle bereits angeregt sind und in den Grundzustand zurückfallen (vgl. \cref{fig:oszillator}).
+
       \begin{figure}[tb]
         \begin{center}
           \fbox
@@ -128,30 +130,31 @@
         \end{center}
       \end{figure}
 
-      Bei der klassischen Beschreibung des Raman-Effektes überlagert sich das induzierte Dipolmoment der Rayleigh-Streuung aus \cref{eq:dipol} mit einem bereits vorhandenen Dipolmoment des Moleküls $p_{el}^0$ zu:
+      Bei der klassischen Beschreibung des Raman-Effektes überlagert sich das induzierte Dipolmoment der Rayleigh-Streuung aus \cref{eq:dipol} mit einem bereits vorhandenen Dipolmoment des Moleküls $p_{el}^0$ zu
       \begin{equation*}
-        p_el=p_{el}^0+\widetilde{\alpha} E
+        p_\mathrm{el}=p_\mathrm{el}^0+\widetilde{\alpha} E,
       \end{equation*}
       \begin{equation*}
-      p_{el}=-e\sum_i r_i+e\sum_k Z_k R_k
+      p_\mathrm{el}=-e\sum_i r_i+e\sum_k Z_k R_k.
       \end{equation*}
       Mit $r_i$ als Elektronen- und $R_k$ als Kern-Koordinaten.
-      Die schnelle Elektronenbewegung wird herausgemittelt und die Kern-Auslenkung $Q_k=|R_k-R_k^0|$ für kleine Amplituden als harmonische Schwingung betrachtet $Q_n(t)=Q_{n0}\cdot cos\omega_n t$. Mit einer Taylorentwicklung und einigen Umformungen folgt:
+      Die schnelle Elektronenbewegung wird herausgemittelt und die Kern-Auslenkung $Q_k=|R_k-R_k^0|$ für kleine Amplituden als harmonische Schwingung betrachtet $Q_n(t)=Q_{n0}\cdot cos\omega_n t$. Mit einer Taylorentwicklung und einigen Umformungen folgt
       \begin{equation}
-        p_{el}=p_{el}^0+\sum_n (\frac{\partial p_{el}}{\partial Q_n})_0 Q_{n0}cos\omega_n t+\widetilde{\alpha}(0) E_0 cos\omega t+(\sum_n (\frac{\partial \alpha_{ij}}{\partial Q_n})_0 Q_{n0}cos(\omega \pm \omega_n)t)\frac{E_0}{2}
+        p_\mathrm{el}=p_\mathrm{el}^0+\sum_n (\frac{\partial p_\mathrm{el}}{\partial Q_n})_0 Q_{n0}\cos\omega_n t+\widetilde{\alpha}(0) E_0 \cos\omega t+(\sum_n (\frac{\partial \alpha_{ij}}{\partial Q_n})_0 Q_{n0}\cos(\omega \pm \omega_n)t)\frac{E_0}{2}.
         \label{eq:gesamtdipolmoment}
       \end{equation}
-      Der erste Term beinhaltet das intrinsische Dipolmoment des Moleküls und der zweite den Anteil, der mit der Molekülschwingung oszilliert. Dieser ist für das Infrarotspektrum verantwortlich. Die letzten beiden Teile geben den Anteil des Dipolmomentes an, der durch die einfallende Welle induziert wird.\\
+      Der erste Term beinhaltet das intrinsische Dipolmoment des Moleküls während der Anteil des zweiten Terms mit der Molekülschwingung oszilliert. Dieser ist für das Infrarotspektrum verantwortlich. Die letzten beiden Teile geben den Anteil des Dipolmomentes an, der durch die einfallende Welle induziert wird.\\
       Die Stärke des dritten Terms (Rayleigh-Streuung) hängt von der Polarisierbarkeit des Moleküls gegenüber der Richtung des Wellenvektors $E_0$.
-      Die Amplitude der Stokes- $(\omega-\omega_n)$ und Anti-Stokes-Streuung $(\omega-\omega_n)$ hängt von der Polarisierbarkeit im Verhältnis zur Kernauslenkung $(\partial \alpha_{ij} / \partial Q_n)$ ab. Man kann aus der Verschiebung der Stokes- und Anti-Stokes-Linien die die Schwingungsfrequenzen des Moleküls bestimmen. Höhere Schwingungsordnung treten bei genügend hoher Auflösung mit abnehmender Intensität auf. Das Verhältnis von Stokes und Anti-Stokes lässt sich mithilfe der Boltzmann-Verteilung in einer quantenmechanischen Betrachtung bestimmen. Diese liefert das Ergebnis:
+      Die Amplitude der Stokes- $(\omega-\omega_n)$ und Anti-Stokes-Streuung $(\omega-\omega_n)$ hängt von der Polarisierbarkeit im Verhältnis zur Kernauslenkung $(\partial \alpha_{ij} / \partial Q_n)$ ab. Man kann aus der Verschiebung der Stokes- und Anti-Stokes-Linien die Schwingungsfrequenzen des Moleküls bestimmen. Höhere Schwingungsordnungen treten bei genügend hoher Auflösung mit abnehmender Intensität auf. Das Verhältnis von Stokes und Anti-Stokes lässt sich mithilfe der Boltzmann-Verteilung in einer quantenmechanischen Betrachtung bestimmen. Diese liefert das Ergebnis
       \begin{equation}
-        \frac{I_{Stokes}}{I_{Anti-Stokes}}=\frac{(\omega-\omega_n)^4}{(\omega+\omega_n)^4}exp(-\hbar \omega_n/ k_B T)
+        \frac{I_{Stokes}}{I_{Anti-Stokes}}=\frac{(\omega-\omega_n)^4}{(\omega+\omega_n)^4}exp(-\hbar \omega_n/ k_B T),
         \label{eq:stokesvergleich}
       \end{equation}
       % hier
-      mit der Boltzmann-Konstante $k_B$ und der Temperatur T. Also kann man aus dem Stokes-, Anti-Stokes-Verhältnis die Temperatur der Moleküle bestimmen.
+      mit der Boltzmann-Konstante $k_B$ und der Temperatur $T$. Somit kann aus dem Stokes-, Anti-Stokes-Verhältnis die Temperatur der Moleküle bestimmt werden.
+
       Des Weiteren verschwindet für homonukleare Moleküle das IR-Spektrum, da $\partial p_{el}/ \partial Q_n)=0$, aber das Raman-Spektrum $(\partial \widetilde{\alpha} / \partial Q) \neq 0$ bleibt erhalten. Aus der Raman-Komponente $(\partial \widetilde{\alpha} / \partial Q)$ kann man die Abhängigkeit der Polarisierbarkeit von den Normalkoordinaten bestimmen. Daraus folgen dann wiederum die Ladungsverschiebungen und Rückstellkonstanten der Molekülschwingungen. \\
-      Vergleicht man IR und Raman-Spektroskopie stellt man einige Unterschiede fest. Beim Raman-Effekt wird das Photon nur gestreut während es bei der IR-Spektroskopie vom Molekül absorbiert wird. Die Vibration des Moleküls ist Raman-Aktiv wenn sie eine Veränderung in der Polarisierbarkeit bewirkt, daher wird kein permanentes Dipolmoment benötigt. Dagegen ist eine Vibration IR-Aktiv wenn sie eine Veränderung im Dipolmoment bewirkt. Außerdem kann bei der IR-Spektroskopie die Probe nicht in Wasser gelöst werden, da Wasser nur eine sehr geringe Durchlässigkeit für IR-Licht hat. Für die Schwingungen der Moleküle gilt: symmetrische Valenzschwingung, IR-inaktiv/ Raman-aktiv; antisymmetrische Valenzschwingung, IR-aktiv/ Raman-inaktiv; zwei Deformationsschwingungen, IR-aktiv/ Raman-inaktiv. \\
+      Vergleicht man IR und Raman-Spektroskopie, so stellt man einige Unterschiede fest. Beim Raman-Effekt wird das Photon nur gestreut, während es bei der IR-Spektroskopie vom Molekül absorbiert wird. Die Vibration des Moleküls ist Raman-Aktiv, wenn sie eine Veränderung in der Polarisierbarkeit bewirkt, daher wird kein permanentes Dipolmoment benötigt. Dagegen heißt eine Vibration IR-Aktiv, wenn sie eine Veränderung im Dipolmoment bewirkt. Außerdem kann bei der IR-Spektroskopie die Probe nicht in Wasser gelöst werden, da Wasser nur eine sehr geringe Durchlässigkeit für IR-Licht hat. Für die Schwingungen der Moleküle gilt: Symmetrische Valenzschwingung, IR-inaktiv/ Raman-aktiv; antisymmetrische Valenzschwingung, IR-aktiv/ Raman-inaktiv; zwei Deformationsschwingungen, IR-aktiv/ Raman-inaktiv. \\
       Über den Depolarisationsgrad der Raman-Linien können Aussagen über die Symmetrie der Schwingungsmoden getroffen werden. Der Depolarisationsgrad ist definiert durch:
       \begin{equation}
         \rho=\frac{3\gamma'^2}{45{\alpha'^2}+4\gamma'^2}
@@ -163,17 +166,17 @@
       % hier
   \section{Schwingung im Molekül}
 
-    Moleküle besitzen drei Translations-Freiheitsgrade, sowie drei Rotations-Freiheitsgrade. Zusätzlich hat ein Molekül noch Freiheitsgrade durch Schwingungen in den Bindungen zwischen den Atomen. Je nach Bindung und Molekül sind Streckung und Stauchung möglich, sowie Schwingungen orthogonal zur Bindungsrichtung.  Damit können Freiheitsgrade abhängig von der Anzahl der Bindungen und Bindungsart dazukommen. Die einfachste Schwingung ist der harmonische Oszillator zwischen zwei Atomen. Sei n die Schwingungsquantenzahl, k die Federkonstante, $m_{1/2}$ die Massen der Atome und $\omega$ die Kreisfrequenz der Schwingung, dann gilt
+    Moleküle besitzen drei Translations-Freiheitsgrade und drei Rotations-Freiheitsgrade. Zusätzlich hat ein Molekül noch Freiheitsgrade durch Schwingungen der Bindungen zwischen den Atomen. Je nach Bindung und Molekül sind Streckungen und Stauchungen möglich und zudem Schwingungen orthogonal zur Bindungsrichtung. Damit kann eine von der Anzahl der Bindungen und Bindungsart abhängige Zahl an Schwingungsfreiheitsgraden zu den Translations- und Rotations-Freiheitsgraden hinzukommen. Die einfachste Schwingung ist der harmonische Oszillator zwischen zwei Atomen. Sei $n$ die Schwingungsquantenzahl, $k$ die Federkonstante, $m_{1/2}$ die Massen der Atome und $\omega$ die Kreisfrequenz der Schwingung, dann gilt
     \begin{equation}
-      E=(n+\frac{1}{2})\hbar \sqrt{k(\frac{1}{m_1}+\frac{1}{m_2})}=(n+\frac{1}{2})\hbar \omega
+      E=(n+\frac{1}{2})\hbar \sqrt{k(\frac{1}{m_1}+\frac{1}{m_2})}=(n+\frac{1}{2})\hbar \omega.
       \label{eq:harmonischeroszi}
     \end{equation}
-    Die Regel für die Schwingungsübergänge lautet $\Delta n= \pm 1$ und der Abstand zwischen den Energieniveaus ist identisch. Für die Frequenz gilt:
+    Die Regel für die Schwingungsübergänge lautet $\Delta n= \pm 1$ und der Abstand zwischen den Energieniveaus ist identisch. Für die Frequenz gilt
     \begin{equation*}
-      \omega_=\sqrt{k/\mu}
+      \omega_=\sqrt{k/\mu},
     \end{equation*}
     mit der reduzierten Masse $\mu=\frac{m_1m_2}{m_1+m_2}$.\\
-    Für reale Moleküle muss der harmonische Oszillator angepasst werden, da die Bindungskräfte eine unbegrenzte Dehnung und die Abstoßungskräfte zwischen den Atomen eine unbegrenzte Stauchung verhindern. E in Abhängigkeit von $\Delta r$, als Auslenkung vom Gleichgewichtspunkt, wird nun mithilfe der Dissoziationsenergie D und einer Molekülspezifischen Konstante a beschrieben.
+    Für reale Moleküle muss der harmonische Oszillator angepasst werden, da die Bindungskräfte eine unbegrenzte Dehnung und die Abstoßungskräfte zwischen den Atomen eine unbegrenzte Stauchung verhindern. $E$ in Abhängigkeit von $\Delta r$, als Auslenkung vom Gleichgewichtspunkt, wird nun mithilfe der Dissoziationsenergie $D$ und einer molekülspezifischen Konstante $a$ beschrieben.
     \begin{equation}
       E=D_e[e^{-\alpha \Delta r}-1]^2=\hbar \omega(\frac{1}{2}+n)-\alpha \hbar \omega (\frac{1}{2}+n)^2+...
       \label{eq:anharmonischerosz}
@@ -193,7 +196,7 @@
   \section{Komponenten des Versuchsaufbaus}
 
     \textbf{Nd:Yag-Laser:}\\
-    Der in diesem Versuch verwendete Laser besteht aus einem Neodynium (Nd) dotierten Yttrium Aluminium Garnet (YAG) Kristall. Der Nd:YAG-Laser ist ein 4-Niveau Doidenlaser, das heißt der Laserkristall wird  gleichzeitig als Resonator verwendet, wie es für Diodenlaser typisch ist. Der Laser emittiert eigentlich Licht der Wellenlänge 1064 nm. Allerdings wird die Wellenlänge mithilfe einer Frequenzverdopplung auf 532 nm verkürzt, um sichtbares grünes Licht zu erhalten.\\
+    Der in diesem Versuch verwendete Laser besteht aus einem Neodynium (Nd) dotierten Yttrium-Aluminium-Garnet (YAG) Kristall. Der Nd:YAG-Laser ist ein 4-Niveau Doidenlaser, das heißt der Laserkristall wird  gleichzeitig als Resonator verwendet, wie es für Diodenlaser typisch ist. Der Laser emittiert eigentlich Licht der Wellenlänge $\SI{1064}{\nano\meter}$, wird die Wellenlänge mithilfe einer Frequenzverdopplung auf $\SI{532}{\nano\meter}$ verkürzt, um sichtbares grünes Licht zu erhalten.\\
     \cite{ndyag}
     \medskip
 
@@ -217,7 +220,7 @@
       \end{center}
     \end{figure}
 
-    Wird das Czerny-Turner-Spektrometer als Monochromator verwendet, wird es wie in \cref{fig:spektrometer} aufgebaut. Der Lichtstrahl tritt durch den Spalt $S_1$ ein, wird vom Kollimator Spiegel $M_1$ kollimiert und auf das Gitter G reflektier. Von dort fällt der Strahl auf den Kameraspiegel $M_2$, dieser fokussiert das Spektrum in der Fokalebene. In dieser Ebene steht auch der Austrittsspalt, durch den das Licht nach draußen fällt. Das Gitter kann durch einen Schrittmotor gedreht werden. Damit kann die Intensität in Abhängigkeit der Gitterstellung aufgetragen werden. Die Skala kann über bekannt Wellenlängen kalibriert werden.
+    Wird das Czerny-Turner-Spektrometer als Monochromator verwendet, wird es wie in \cref{fig:spektrometer} aufgebaut. Der Lichtstrahl tritt durch den Spalt $S_1$ ein, wird vom Kollimator Spiegel $M_1$ kollimiert und auf das Gitter $G$ reflektier. Von dort fällt der Strahl auf den Kameraspiegel $M_2$, dieser fokussiert das Spektrum in der Fokalebene. In dieser Ebene steht auch der Austrittsspalt, durch den das Licht nach draußen fällt. Das Gitter kann durch einen Schrittmotor gedreht werden. Damit kann die Intensität in Abhängigkeit der Gitterstellung aufgetragen werden. Die Skala kann über bekannte Wellenlängen kalibriert werden.
     \cite{czerny}\\
     \medskip
 
