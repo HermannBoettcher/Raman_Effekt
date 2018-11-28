@@ -7,32 +7,49 @@
 % Stand: 14.09.2016 - Michael Brendle (Version 0.4)   %
 %                                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% meine Paketes
-
-%TikZ
-\usepackage{tikz}
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.15}
-
-\usepackage{subfiles}
-\usepackage[toc,page]{appendix}
-\usepackage{here}
-
-
-% fonts und quatsch für Mathematik
-\usepackage{siunitx}
-\sisetup{output-decimal-marker = {,}}
+\newenvironment{poliabstract}[1]
+   {\renewcommand{\abstractname}{#1}\begin{abstract}}
+   {\end{abstract}}
+% mein Kram
+\usepackage{bm}
+\newcommand{\uvec}[1]{\boldsymbol{\hat{\textbf{#1}}}}
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{poreux2016.bib}
+\usepackage{shellesc}
+\usepackage[mode=buildnew]{standalone}% requires -shell-escape
+\usepackage[decimalsymbol=comma, per-mode=fraction]{siunitx}
+\sisetup{mode=text}
 \usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
-\usepackage{cmbright}
-\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{forest}
+\usepackage{biblatex}
+\usepackage{pgfplots}
+\usepgfplotslibrary{colormaps}
+%\pgfplotsset{compat=1.15}
+\usepackage{subfig}
+\usepackage{subfiles}
+\usepackage{expl3}
 \usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{fontawesome}
+\usepackage{silence}
+\usepackage{mathtools}
+\usepackage[addtotoc]{abstract}
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple,listofformat=subsimple}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+% exclude warnings!
+\WarningFilter{scrreprt}{Usage of package `titlesec'}
+\WarningFilter{scrreprt}{Usage of package `fancyhdr'}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+\WarningFilter{scrreprt}{\float@addtolists detected!}
+\WarningFilter{titlesec}{Non standard sectioning command detected}
+\WarningFilter{scrreprt}{LaTeX Font Warning}
+
+
 % Farben
 \usepackage{xcolor}
-\usepackage{subfig}
-\usepackage{abstract}
+
 % Seiten-Einrichtung
 \usepackage{geometry}
 % DinA4 Initialisierung
@@ -40,28 +57,37 @@
 \geometry{paperheight=29.7cm, paperwidth=21.0cm, left=2.5cm, right=2.5cm, bottom=2cm, top=2.5cm, headheight=12pt, headsep=0.8cm, footskip=22pt}%
 
 % Codierung
+%\usepackage[T1]{fontspec}
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
-\renewcommand{\appendixpagename}{\appendixname}
-\renewcommand{\appendixtocname}{\appendixname}
-%\usepackage[T1]{fontenc}
-
-% Bibliographie
-\usepackage[backend=bibtex]{biblatex}
-\usepackage[babel, german=quotes]{csquotes}
-\bibliography{bibliography}
+%\usepackage[english]{babel}
 
 % Absolute Positionierung der Textfelder inkl. Uni Konstanz Logo
 \usepackage[absolute, overlay]{textpos}
 
 % Unterstreichungen (Anpassen der Dicke und der Farbe)
 \usepackage{soul}
+\usepackage{etoolbox}
+\providetoggle{externalize}
+\newcommand{\notexternal}{%
+  \iftoggle{externalize}{\tikzset{external/export next=false}}{}
+}
+
+\iftoggle{externalize}{\tikzexternalize[prefix=figures-compiled/]}{}
 
 % Fuer das Merken und Markieren Element, sowie Überschriften
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{arrows.meta}
-\usetikzlibrary{backgrounds,matrix,fadings,calc,positioning,decorations.pathreplacing,arrows.meta,shapes,shapes.multipart}
+\usetikzlibrary{backgrounds,matrix,fadings,calc,positioning,decorations.pathreplacing,decorations.markings,arrows.meta,shapes,shapes.multipart}
+\usetikzlibrary{patterns,math,quotes,positioning,angles}
+\usetikzlibrary{spy}
+\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikzpictures/]
+\settoggle{externalize}{false}
+\tikzfading[name=fade out, inner color=transparent!0, outer color=transparent!100]
+
 
 % Fuer If-Then-Else
 \usepackage{ifthen}
@@ -93,7 +119,11 @@
 \usepackage{float}
 
 % Schriften
-\usepackage{cmbright}
+%\usepackage{lmodern}
+%\usepackage{cmbright}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
 
 % Paket für Unter- und Überschrift für Abbildungen und Tabellen
 % Möchte man eine andere Unter- und / oder Überschrift können hier
@@ -104,9 +134,9 @@
 \usepackage[format=hang, justification=justified, labelfont=bf, font=small, labelsep=space]{caption}
 
 % Nummerrierung von Abbilungen und Tabelle fortlaufend
-\usepackage{chngcntr}
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
+%\usepackage{chngcntr}
+%\counterwithout{figure}{chapter}
+%\counterwithout{table}{chapter}
 
 % Paket für Tabellen im Corporate Design der Universität Konstanz
 \usepackage{tabu}
@@ -117,7 +147,7 @@
 \usepackage{cleveref}
 
 % LaTeX Fixes - ab Version 2015 nicht mehr notwendig
-\usepackage{fixltx2e}
+%\usepackage{fixltx2e}
 
 % Pakete für die Anpassung der Kapitel und Abschnittsüberschriften
 \usepackage{fancyhdr}
@@ -323,7 +353,7 @@
 %     http://www.ctex.org/documents/packages/layout/titlesec.pdf
 
 \titleformat{\chapter}% command
-{\selectfontsize{16pt}\sffamily\gdef\chapterlabel{}}% format (Definitionen, Schriftgroesse, ...)
+{\selectfontsize{17pt}\sffamily\gdef\chapterlabel{}}% format (Definitionen, Schriftgroesse, ...)
 {\gdef\chapterlabel{\thechapter}}% label (Label erhalten; hier: \thechapter)
 {0pt}% sep
 {%
@@ -387,7 +417,7 @@
 {%
 \ifx\chapterlabel\empty\seeblauunderline{\textbf{#1}}\else\seeblauunderline{\textbf{\chapterlabel~#1}}\fi%
 }
-\titlespacing*{\subsection}{0pt}{24pt}{12pt}
+\titlespacing*{\subsubsection}{0pt}{24pt}{12pt}
 
 
 
@@ -415,10 +445,10 @@
 \def\docTitle{#1}
 }
 
-\def\docSubtitle{}
-\renewcommand{\subtitle}[1]{
-\def\docSubtitle{#1}
-}
+%\def\docSubtitle{}
+%\renewcommand{\subtitle}[1]{
+%\def\docSubtitle{#1}
+%}
 
 \def\docUnisection{}
 \newcommand{\unisection}[1]{
@@ -517,6 +547,7 @@
 \ifthenelse{\equal{\keynone}{\titlegraphic}}%
 {%
 	\begin{textblock*}{\paperwidth}(-0.5cm, \paperheight * 1/4 + 0.6cm)%
+  \tikzexternaldisable
 	\begin{tikzpicture}%
 	\draw [schwarz10, fill=schwarz10, line width=0mm] (0,0) -- (\paperwidth-2.5cm,0) -- (\paperwidth-2.5cm,\paperheight - 12.2cm) -- (0,\paperheight - 12.2cm) -- (0,0);%
 	\end{tikzpicture}%
@@ -531,21 +562,21 @@
 % CD Richtlinien.
 \begin{textblock*}{\paperwidth}(2cm, \paperheight * 1/5)%
 \selectfontsize{25pt}%
-\merken{\paperheight * 1/4}{\selectfontsize{16pt}\datum}{\docTitle}%
+\merken{\paperheight * 1/4}{\selectfontsize{17pt}\datum}{\docTitle}%
 \end{textblock*}%
 % Erstelle ein Textfeld mit dem Autor des Dokumentes unterhalb der Grafik
 \begin{textblock*}{\paperwidth}(2cm, \paperheight - 3.2cm)%
-\selectfontsize{16pt}%
+\selectfontsize{17pt}%
 \seeblauunderline{\textbf{\autor}}%
 \end{textblock*}%
 % Erstelle ein Textfeld mit dem Untertitel des Dokumentes unterhalb
 % des Autors.
-\begin{textblock*}{\paperwidth}(2cm, \paperheight - 2.8cm)%
-\selectfontsize{16pt}%
-\docSubtitle%
-\end{textblock*}%
-\newpage%
-\thispagestyle{empty} $ $%
+%\begin{textblock*}{\paperwidth}(2cm, \paperheight - 2.8cm)%
+%\selectfontsize{16pt}%
+%\docSubtitle%
+%\end{textblock*}%
+%\newpage%
+%\thispagestyle{empty} $ $%
 \newpage%
 \end{sffamily}
 }%
@@ -603,24 +634,24 @@
 \begin{sffamily}%
 % Dokumenten Titel
 \begin{textblock*}{\textwidth}(0.5\footspace, 4cm)%
-\selectfontsize{18pt}\centering\textbf{\docTitle}%
+\selectfontsize{17pt}\centering\textbf{\docTitle}%
 \end{textblock*}%
 % Art der Arbeit, z.b. Bachelorarbeit, Masterarbeit, ...
-\begin{textblock*}{\textwidth}(0.5\footspace, 8cm)%
-\selectfontsize{18pt}\centering\textbf{#1}%
+\begin{textblock*}{\textwidth}(0.5\footspace, 7cm)%
+\selectfontsize{17pt}\centering\textbf{#1}%
 \end{textblock*}%
 % Autor (Deutsch, English)
 \ifthenelse{\equal{\lanUser}{\lanEnglish}}%
 {%
-\begin{textblock*}{\textwidth}(0.5\footspace, 10cm)%
+\begin{textblock*}{\textwidth}(0.5\footspace, 8.5cm)%
 \selectfontsize{14pt}\centering%
-by\\%
+vorgelegt von\\%
 \vskip 2pt
 \textbf{\autor}%
 \end{textblock*}%
 }%
 {%
-\begin{textblock*}{\textwidth}(0.5\footspace, 10cm)%
+\begin{textblock*}{\textwidth}(0.5\footspace, 8.5cm)%
 \selectfontsize{14pt}\centering%
 vorgelegt von\\%
 \vskip 2pt%
@@ -630,36 +661,47 @@ vorgelegt von\\%
 % at the / an der
 \ifthenelse{\equal{\lanUser}{\lanEnglish}}%
 {%
-\begin{textblock*}{\textwidth}(0.5\footspace, 12.5cm)%
+\begin{textblock*}{\textwidth}(0.5\footspace, 10.5cm)%
 \selectfontsize{14pt}\centering%
-at the%
+an der%
 \end{textblock*}%
 }%
 {%
-\begin{textblock*}{\textwidth}(0.5\footspace, 12.5cm)%
+\begin{textblock*}{\textwidth}(0.5\footspace, 10.5cm)%
 \selectfontsize{14pt}\centering%
 an der%
 \end{textblock*}%
 }%
 % Unversität Konstanz Logo
-\begin{textblock*}{\textwidth}(0.5\footspace, 13.25cm)%
+\begin{textblock*}{\textwidth}(0.5\footspace, 10.5cm)%
 \centering\includegraphics[width=0.75\textwidth]{graphics/UniKonstanz_Logo_Optimum.pdf}
 \end{textblock*}%
 % Uni-Sektion und Fachebereich
-\begin{textblock*}{\textwidth}(0.5\footspace, 19.5cm)%
+\begin{textblock*}{\textwidth}(0.5\footspace, 15.5cm)%
 \selectfontsize{14pt}\centering%
 \docUnisection\\%
 \vskip 2pt%
 \docDepartment%
 \end{textblock*}%
+{%
+\begin{textblock*}{\textwidth}(0.5\footspace, 18cm)%
+\selectfontsize{14pt}\centering%
+angefertigt am\\%
+\vskip 2pt%
+\textbf{Institut Néel}%\\%
+\vskip 2pt%
+des\\%
+\vskip 2pt%
+\textbf{Centre national de la recherche scientifique}
+\end{textblock*}%
+}%
 % Gutachter (Deutsch, English)
 \ifthenelse{\equal{\lanUser}{\lanEnglish}}%
 {%
 \begin{textblock*}{\textwidth}(0.5\footspace, 22.5cm)%
 \selectfontsize{14pt}\centering%
 \begin{tabular}{lL{0.5cm}l}%
-1. Evaluated by & & \docSupervisorOne\\[2pt]%
-2. Evaluated by & & \docSupervisorTwo%
+1. Gutachter & & \docSupervisorOne\\[2pt]%
 \end{tabular}%
 \end{textblock*}%
 }%
@@ -667,7 +709,8 @@ an der%
 \begin{textblock*}{\textwidth}(0.5\footspace, 22.5cm)%
 \selectfontsize{14pt}\centering%
 \begin{tabular}{lL{0.5cm}l}%
-Tutor: & & \docSupervisorOne
+Erstgutachter: & & \docSupervisorOne\\[2pt]%
+Zweitgutachter: & & \docSupervisorTwo%
 \end{tabular}%
 \end{textblock*}%
 }%
@@ -676,7 +719,7 @@ Tutor: & & \docSupervisorOne
 {%
 \begin{textblock*}{\textwidth}(0.5\footspace, 26cm)%
 \selectfontsize{14pt}\centering%
-Constance, \jahr%
+Konstanz, \jahr%
 \end{textblock*}%
 }%
 {%
@@ -768,6 +811,7 @@ Konstanz, \jahr%
 %
 % EINE KOMMENTIERUNG DER FOLGENDEN ZEILEN FOLGT AUS ZEITLICHEN GRÜNDEN
 % ERST IN DER NÄCHSTEN VERSION
+\tikzexternaldisable
 \begin{tikzpicture}
 \tikzstyle{nodestylenormal}=[anchor=west, color=black, inner sep=0mm]%
 \tikzstyle{nodestyleright}=[anchor=east, color=black, inner sep=0mm]%
@@ -924,6 +968,7 @@ Konstanz, \jahr%
 
 \newcommand{\seeblauunderline}[1]{%
 \settowidth{\bluelinewidth}{#1}%
+\tikzexternaldisable
 \begin{tikzpicture}[remember picture,overlay]%
 \draw [seeblau100, fill=seeblau100, line width=0.10\currentfontsize] (0,-0.62ex) -- (\bluelinewidth,-0.62ex);%
 \node [anchor=base west] at (-0.8ex,0) {#1};%
@@ -1021,6 +1066,7 @@ Konstanz, \jahr%
 
 \newcommand{\merken}[3]{%
 \setlength{\merkenlength}{#1}%
+\tikzexternaldisable
 \begin{tikzpicture}%
 \tikzstyle{nodestyle}=[align=left, color=white, overlay, inner sep=0mm]%
 \draw [seeblau100, fill=seeblau100] (0,\merkenlength) -- (\merkenlength,\merkenlength) -- (\merkenlength,0) -- (0,0) -- (0,\merkenlength);%
@@ -1239,6 +1285,7 @@ Konstanz, \jahr%
 \setlength{\blockcolumnwidth}{\blockwidth - \templength}%
 \setlength{\blockcolumnwidth}{\blockcolumnwidth / \value{columnnumber}}%
 \setlength{\tempboxthick}{\commandkey{thick}}%
+\tikzexternaldisable
 \begin{tikzpicture}%
 \tikzstyle{nodestyle}=[align=left, overlay, inner sep=0mm, anchor=north west]%
 \tikzstyle{arrowstyle}=[arrows={-Straight Barb[]}]%
@@ -1530,6 +1577,7 @@ Konstanz, \jahr%
 % ERST IN DER NÄCHSTEN VERSION
 
 \newkeycommand{\cdline}[color=seeblau100, thick=\boxlinewidth, mode=horizontal, arrowleft=false, arrowright=false][1]{%
+\tikzexternaldisable
 \begin{tikzpicture}%
 \tikzstyle{linestyle}=[color=\commandkey{color}, line width=\commandkey{thick}]%
 \ifthenelse{\equal{\commandkey{arrowleft}}{true}}{%
@@ -1623,6 +1671,7 @@ Konstanz, \jahr%
 % ERST IN DER NÄCHSTEN VERSION
 
 \newkeycommand{\cdbracket}[color=seeblau100, thick=\boxlinewidth, mode=left, arrowleft=false, arrowright=false, arrowmiddle=false][2]{%
+\tikzexternaldisable
 \begin{tikzpicture}%
 \tikzstyle{linestyle}=[color=\commandkey{color}, line width=\commandkey{thick}]%
 \ifthenelse{\equal{\commandkey{arrowleft}}{true}}{%
@@ -2114,3 +2163,5 @@ Konstanz, \jahr%
 \fancyfoot[L]{\small\hfill\thepage}%
 }{}%
 }
+
+\settoggle{externalize}{true}

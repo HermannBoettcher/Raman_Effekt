@@ -1,0 +1,159 @@
+\documentclass[../bericht.tex]{subfiles}
+
+\begin{document}
+
+  \chapter{Versuchsdurchführung und -auswertung}
+
+    Im folgenden Kapitel werden die einzelnen Schritte der Versuchsdurchführung und die jeweilige Analyse parallel beschrieben.
+
+
+    \section{Vorbereitende Messungen}
+
+
+      \subsection{Dunkelspektrum}
+
+        Das Spektrometer zeichnet auch ohne Einschalten des Lasers bereits Signale auf. Dies liegt in diesem Falle nicht am Streulicht anderer Lichtquellen im Raum, wie durch das Ausbleiben von Veränderungen im Signal während dem Ein- und Ausschalten von prominenten Lichtquellen wie der Deckenleucchte leicht bewiesen werden kann. Vielmehr kommt es in der Ladungsträgerzone der Dioden zu spontanen Elektron-Loch-Paar-Bildungen, welche als Photonen registriert werden. Mit dem zu Auswertung verwendeten Programm \textit{???} wird deshalb bei jeder Änderung der Integrationszeit während der Versuche ein neues Dunkelspektrum aufgezeichnet, das heißt mit geblocktem Laserstrahl einmal die Integrationszeit durchlaufen. Dieses Dunkelspektrum subtrahiert das Programm dann von jedem weiteren aufgenommenen Spektrum automatisch, sodass der Untergrund weitgehen bereinigt ist.
+
+
+      \subsection{Kalibrierung des Spektrometers}
+      \label{subsec:kalibrierung}
+
+        Um die Wellenlängen-, bzw. Frequenz-Kalibrierung des Spektrometers zu prüfen und gegebenenfalls zu korrigieren werden zwei Messungen mit in der Literatur hinreichend präzise charakterisierten Lichtquellen durchgeführt. Die aufgezeichneten Spektren einer Quecksilberdampflampe und einer Heliumlampe sind in \cref{fig:hg-he-spektren} abgebildet.  Die charakteristischen Linien treten hier verbreitert in Erscheinung. Es liegen die Dopplerverbreiterung, die Verbreiterung durch die natürliche Linienbreite, sowie die linear mit dem Dampfdruck ansteigende Druckverbreiterung vor. Prominent ist hierbei die Dopplerverbreiterung. Wegen der gaussförmigen Maxwell-Boltzmann-Verteilung der Geschwindigkeit der Gasatome können die verbreiterten Linien zu Bestimmung der Position der Maxima mit Gaussfits approximiert werden. Diese sind ebenfalls in \cref{fig:hg-he-spektren} aufgetragen. Die so gemessenen Linienpositionen mitsamt der aus \cite{NIST_ASD} entnommenen Literaturwerte sind in \cref{tbl:charakteristische-linien} aufgeführt. Die bei den experimentellen Werten angegebenen Unsicherheiten sind lediglich die Fehler der Fitparameter. Diese sind natürlich deutlich zu klein, wenn die aufgrund der Temperaturschwankungen Unsicherheiten und Messunsicherheiten der verwendeten Geräte selbst noch respektiert werden. Dementsprechend stimmen die gemessenen Wellenlängen der charakteristischen Linien der Lichtquellen hinreichend präzise mit den Literaturwerten überein, um keine weiteren Korrekturen vornehmen zu müssen.
+        \medskip
+
+        \begin{figure}[tb]
+          \centering
+          \tikzsetnextfilename{hg_he_spektren}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              grid,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              every axis plot,
+        			xmin = 490, xmax = 680,
+        			%ymin = \Pmin, ymax = \Pmax,
+        			xlabel = {Wellenlänge $\lambda$ in $\si{\nano\meter}$},
+        			ylabel = {Zählrate $n$},
+              ]
+        			% Add plots
+        			\addplot[color=red!30, only marks, line width = 1pt, mark options={scale=0.2}] table [x=lambda,y=n]{data/hg_spektrum_fit.txt};
+        			\addlegendentry{Hg data points}
+        			\addplot[color=red, line width = 1pt] table [x=lambda,y=fit]{data/hg_spektrum_fit.txt};
+        			\addlegendentry{Hg fit}
+        			\addplot[color=blue!30, only marks, line width = 1pt, mark options={scale=0.2}] table [x=lambda,y=n]{data/he_spektrum_fit.txt};
+        			\addlegendentry{He data points}
+        			\addplot[color=blue, line width = 1pt] table [x=lambda,y=fit]{data/he_spektrum_fit.txt};
+        			\addlegendentry{He fit}
+            \end{axis}
+          \end{tikzpicture}
+          \caption{}
+          \label{fig:hg-he-spektren}
+        \end{figure}
+
+        \begin{table}[tb]
+        \caption[Experimentelle und Literaturwerte (\cite{NIST_ASD}) der charakteristischen Linien der Quecksilberdampflampe und der Heliumlampe.]{Experimentelle und Literaturwerte (\cite{NIST_ASD}) der charakteristischen Linien der Quecksilberdampflampe und der Heliumlampe zum Prüfen der Kalibrierung des Spektrometers. Für die weitere Interprätation siehe \cref{subsec:kalibrierung}}
+        \label{tbl:charakteristische-linien}
+        \selectfontsize{10pt}
+        \begin{tabu} {X[r]X[r]X[r]X[r]X[r]X[r]X[r]}
+          \unitoprule \\
+          &\multicolumn3{c}{\textbf{Hg}}  &\multicolumn3{c}{\textbf{He}}  \\
+          \unimidrule \\
+          $\lambda_\mathrm{exp}$ $[\si{\nano\meter}]$ &546,075  &576,961  &579,067  &501,569  &587,562  &667.815 \\
+          $\lambda_\mathrm{lit}$ $[\si{\nano\meter}]$ &546,237(1)  &577,128(2)  &579,241(3) &501,572(41)  &587,752(01)  &668,274(09) \\
+          \unitoprule \\
+        \end{tabu}
+        \end{table}
+
+        Natürlich ist der Nd:YAG-Laser. Ein Spektrum ohne Streuer wurde aber nicht aufgezeichnet und so soll hier vorab darauf verwiesen werden, dass das MAximum der Rayleigh-Streuung bezüglich der Raman-Verschiebung in allen späteren Messungen auf $\SI{0}{\per\centi\meter}$ liegt und damit aufgrund der Einstellung des verwendeten Analyseprogramms bei $\SI{532}{\nano\meter}$. Dies bestätigt wiederum die zuvor gemachte Behaupttung, dass das Spektrometer hinreichend präzise für dieses Experiment kalibriert ist.
+
+
+      \subsection{Linearität des Spektrometers}
+      \label{subsec:linearitaet}
+
+        \begin{figure}[tb]
+          \tikzsetnextfilename{linearity}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              grid,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              every axis plot,
+              xmin = 666, xmax = 671,
+              %ymin = \Pmin, ymax = \Pmax,
+              xlabel = {Wellenlänge $\lambda$ in $\si{\nano\meter}$},
+              ylabel = {Zählrate $n$},
+              ]
+              % Add plots
+              \addplot[color=red,  line width = 1pt] table [x=lambda,y=n]{data/he_50.txt};
+              \addlegendentry{$\SI{50}{\milli\second}$}
+              \addplot[color=blue,  line width = 1pt] table [x=lambda,y=n]{data/he_100.txt};
+              \addlegendentry{$\SI{100}{\milli\second}$}
+              \addplot[color=green,  line width = 1pt] table [x=lambda,y=n]{data/he_200.txt};
+              \addlegendentry{$\SI{200}{\milli\second}$}
+              \addplot[color=orange,  line width = 1pt] table [x=lambda,y=n]{data/he_400.txt};
+              \addlegendentry{$\SI{400}{\milli\second}$}
+              \addplot[color=purple,  line width = 1pt] table [x=lambda,y=n]{data/he_800.txt};
+              \addlegendentry{$\SI{800}{\milli\second}$}
+              \addplot[color=brown,  line width = 1pt] table [x=lambda,y=n]{data/he_2000.txt};
+              \addlegendentry{$\SI{2000}{\milli\second}$}
+              \addplot[color=violet,  line width = 1pt] table [x=lambda,y=n]{data/he_3000.txt};
+              \addlegendentry{$\SI{3000}{\milli\second}$}
+              \addplot[color=cyan,  line width = 1pt] table [x=lambda,y=n]{data/he_4000.txt};
+              \addlegendentry{$\SI{4000}{\milli\second}$}
+            \end{axis}
+          \end{tikzpicture}
+          \caption[Spektren der $\sim\SI{668}{\nano\meter}$-Linie der Heliumlampe bei verschiedenen Integrationszeiten zur Prüfung der Linearität des Spektrometers.]{Spektren der $\approx\SI{668}{\nano\meter}$-Linie der Heliumlampe bei verschiedenen Integrationszeiten zur Prüfung der Linearität des Spektrometers. Für weitere Ausführungen siehe \cref{subsec:linearitaet}}
+          \label{fig:linearity}
+        \end{figure}
+
+        Das Spektrometer zählt unter Verwendung von Dioden die, nach Wellenlänge sortierten, einfallenden Photon. Bei zeitlich konstanter Lichtquelle sollte also die Zahl $n$ der registrierten Photonen pro wellenlänge linear zunehmen. Um dies zu überprüfen sind in \cref{fig:linearity} die Spektren der Heliumlampe für verschiedene Integrationszeiten aufgetragen. An dieser Stelle ist zu beachten, dass das Spektrometer 16 Bit basiert ist und damit eine Zählrate von $2^{16}\approx 65000$ nicht überschreiten kann.
+
+        Die Zählrate der lokalen $\sim\SI{668}{\nano\meter}$-Maxima der Spektren werden mithilfe von \textit{Python} aus den Rohdaten extrahiert, deses Mal ohne die Verwendung eines Fits. Aufgetragen über den Integrationszeiten ergibt sich, wie erwartet, ein linearer Zusammenhang, wie in \cref{fig:linearitaet} abgebildet ist. Die Gleichung der linearen Regression durch den Ursprung ist
+        \begin{equation}
+          n(t_\mathrm{int})=\SI{8,386(1)}{\per\milli\second} \cdot t_\mathrm{int}.
+          \label{eq:linear-fit}
+        \end{equation}
+        Messpunkte und Regression liegen übereinander, was die Linearität des Spektrometers unterhalb der Sättigungsgrenze bestätigt.
+
+        \begin{figure}
+          \tikzsetnextfilename{linear_fit}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              grid,
+              legend style={at={(1,0)}, legend columns=1, anchor=south east},
+              every axis plot,
+              xmin = 0, xmax = 5,
+              ymin = 0, ymax = 35000,
+              xlabel = {Integrationszeit $t_\mathrm{int}$ in $\si{\second}$},
+              ylabel = {Zählrate $n$},
+              ]
+              % Add plots
+            	\addplot[color=red, only marks] coordinates {
+            		(0.05,382.97)
+            		(0.1,827.38)
+            		(0.2,1605.61)
+            		(0.4,3205.07)
+            		(0.8,6782.87)
+            		(2,16725.76)
+            		(4,33572.35)
+            	};
+              \addlegendentry{Messpunkte}
+              \addplot[color=blue, line width=1pt] gnuplot{8386.15286*x};
+              \addlegendentry{Lineare Regression}
+            \end{axis}
+          \end{tikzpicture}
+          \caption[Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten (vgl. \cref{fig:linearity}) und lineare Regression.]{Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten und lineare Regression gemäß \cref{eq:linear-fit}.}
+          \label{fig:linearitaet}
+        \end{figure}
+
+
+
+
+\end{document}
