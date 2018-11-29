@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2820fde2-887e-4464-9ae6-560b4dfe2e60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/hg_he_spektren.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/linearity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/beispielPDF.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/beispielPDF.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/beispielThesis.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht-blx.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/bericht-blx.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht.bbl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht.blg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/bericht.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/bericht.run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/bericht.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/bibliography.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/bibliography.bib.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/sty/themeKonstanz.sty" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/sty/themeKonstanz.sty" afterDir="false" />
-    </list>
+    <list default="true" id="2820fde2-887e-4464-9ae6-560b4dfe2e60" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +12,7 @@
     <session id="-1882876729">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -70,7 +56,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/linearity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
+            <state relative-caret-position="750">
               <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -113,8 +99,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="492" />
-    <option name="width" value="1590" />
+    <option name="x" value="1920" />
+    <option name="width" value="1600" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -158,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.linearity">
+  <component name="RunManager" selected="Python.hg_he_spektren">
     <configuration name="hg_he_spektren" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,8 +193,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.linearity" />
         <item itemvalue="Python.hg_he_spektren" />
+        <item itemvalue="Python.linearity" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +213,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1172" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24984147" />
@@ -238,7 +223,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24901961" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24901961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -293,7 +278,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/linearity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
+        <state relative-caret-position="750">
           <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />

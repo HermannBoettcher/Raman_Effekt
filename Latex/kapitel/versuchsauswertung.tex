@@ -18,7 +18,7 @@
       \subsection{Kalibrierung des Spektrometers}
       \label{subsec:kalibrierung}
 
-        Um die Wellenlängen-, bzw. Frequenz-Kalibrierung des Spektrometers zu prüfen und gegebenenfalls zu korrigieren werden zwei Messungen mit in der Literatur hinreichend präzise charakterisierten Lichtquellen durchgeführt. Die aufgezeichneten Spektren einer Quecksilberdampflampe und einer Heliumlampe sind in \cref{fig:hg-he-spektren} abgebildet.  Die charakteristischen Linien treten hier verbreitert in Erscheinung. Es liegen die Dopplerverbreiterung, die Verbreiterung durch die natürliche Linienbreite, sowie die linear mit dem Dampfdruck ansteigende Druckverbreiterung vor. Prominent ist hierbei die Dopplerverbreiterung. Wegen der gaussförmigen Maxwell-Boltzmann-Verteilung der Geschwindigkeit der Gasatome können die verbreiterten Linien zu Bestimmung der Position der Maxima mit Gaussfits approximiert werden. Diese sind ebenfalls in \cref{fig:hg-he-spektren} aufgetragen. Die so gemessenen Linienpositionen mitsamt der aus \cite{NIST_ASD} entnommenen Literaturwerte sind in \cref{tbl:charakteristische-linien} aufgeführt. Die bei den experimentellen Werten angegebenen Unsicherheiten sind lediglich die Fehler der Fitparameter. Diese sind natürlich deutlich zu klein, wenn die aufgrund der Temperaturschwankungen Unsicherheiten und Messunsicherheiten der verwendeten Geräte selbst noch respektiert werden. Dementsprechend stimmen die gemessenen Wellenlängen der charakteristischen Linien der Lichtquellen hinreichend präzise mit den Literaturwerten überein, um keine weiteren Korrekturen vornehmen zu müssen.
+        Um die Wellenlängen-, bzw. Frequenz-Kalibrierung des Spektrometers zu prüfen und gegebenenfalls zu korrigieren werden zwei Messungen mit in der Literatur hinreichend präzise charakterisierten Lichtquellen durchgeführt. Die aufgezeichneten Spektren einer Quecksilberdampflampe und einer Heliumlampe sind in \cref{fig:hg-he-spektren} abgebildet.  Die charakteristischen Linien treten hier verbreitert in Erscheinung. Es liegen die Dopplerverbreiterung, die Verbreiterung durch die natürliche Linienbreite, sowie die linear mit dem Dampfdruck ansteigende Druckverbreiterung vor. Prominent ist hierbei die Dopplerverbreiterung. Wegen der gaussförmigen Maxwell-Boltzmann-Verteilung der Geschwindigkeit der Gasatome können die verbreiterten Linien zu Bestimmung der Position der Maxima mit Gaussfits approximiert werden. Diese sind ebenfalls in \cref{fig:hg-he-spektren} aufgetragen. Die so gemessenen Linienpositionen mitsamt der aus \cite{NIST_ASD} entnommenen Literaturwerte sind in \cref{tbl:charakteristische-linien} aufgeführt. Die bei den experimentellen Werten angegebenen Unsicherheiten sind lediglich die Fehler der Fitparameter. Diese sind natürlich deutlich zu klein, wenn die Unsicherheiten aufgrund der  und Messunsicherheiten der verwendeten Geräte selbst noch respektiert werden. Dementsprechend stimmen die gemessenen Wellenlängen der charakteristischen Linien der Lichtquellen, vor Allem unter berücksichtigung der Breite der Guassglocken, hinreichend präzise mit den Literaturwerten überein, um keine weiteren Korrekturen vornehmen zu müssen.
         \medskip
 
         \begin{figure}[tb]
@@ -66,7 +66,7 @@
         \end{tabu}
         \end{table}
 
-        Natürlich ist der Nd:YAG-Laser. Ein Spektrum ohne Streuer wurde aber nicht aufgezeichnet und so soll hier vorab darauf verwiesen werden, dass das MAximum der Rayleigh-Streuung bezüglich der Raman-Verschiebung in allen späteren Messungen auf $\SI{0}{\per\centi\meter}$ liegt und damit aufgrund der Einstellung des verwendeten Analyseprogramms bei $\SI{532}{\nano\meter}$. Dies bestätigt wiederum die zuvor gemachte Behaupttung, dass das Spektrometer hinreichend präzise für dieses Experiment kalibriert ist.
+        Natürlich ist der Nd:YAG-Laser. Ein Spektrum ohne Streuer wurde aber nicht aufgezeichnet und so soll hier vorab darauf verwiesen werden, dass das Maximum der Rayleigh-Streuung bezüglich der Raman-Verschiebung in allen späteren Messungen auf $\sim\SI{0}{\per\centi\meter}$ liegt und damit aufgrund der Einstellung des verwendeten Analyseprogramms bei $\SI{532}{\nano\meter}$. Dies bestätigt wiederum die zuvor gemachte Behaupttung, dass das Spektrometer hinreichend präzise für dieses Experiment kalibriert ist.
 
 
       \subsection{Linearität des Spektrometers}
@@ -152,6 +152,46 @@
           \caption[Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten (vgl. \cref{fig:linearity}) und lineare Regression.]{Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten und lineare Regression gemäß \cref{eq:linear-fit}.}
           \label{fig:linearitaet}
         \end{figure}
+
+
+      \subsection{Kerbfilter}
+
+        Um die Breite und Position des Wellenlängenbereichs, welchen der Kerbfilter blockt, zu messen, wird eine Handytaschenlampe als breitbandige Lichtquelle genutzt. \Cref{fig:kerbfilter-spektren} zeigt Spektren des Handys mit und ohne Kerbfilte im Strahlengang. Dabei ist der Kerbfilter in der Nullposition $\varphi=0$ um $\ang{90}$ gegen den Strahlengang gedreht. Die weiteren Drehwinkel sind als Drehung gegen die Nullposition gemessen und aufgrund der Messung mittels Millimeterpapier stark Messunsicherheitsbehaftet ($\delta \varphi=\pm \ang{1}$). Durch die Drehung des Kerbfilters (Dünnschichtfilter) vergrößert sich die vom Licht zu transmittierende Schichtdicke und damit verschieben sich die geblockten Wellenlängen zu kleineren Werten. Hierbei ist die Verschiebung nach einfacher Geometrie unabhängig von der Drehrichtung. Die Breite des geblockten Wellenlängenintervalls wird in den folgenden Aalysen eine Rolle spielen.  
+
+        \begin{figure}[tb]
+          \tikzsetnextfilename{kerbfilter}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.8*\textwidth,
+              height=0.5*\textwidth,
+              grid,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              every axis plot,
+              xmin = 480, xmax = 660,
+              %ymin = \Pmin, ymax = \Pmax,
+              xlabel = {Wellenlänge $\lambda$ in $\si{\nano\meter}$},
+              ylabel = {Zählrate $n$},
+              ]
+              % Add plots
+              \addplot[color=red,  line width = 1pt] table [x=lambda,y=n]{data/handy_ohne_kerb.txt};
+              \addlegendentry{Ohne Kerbfilter}
+              \addplot[color=blue,  line width = 0.5pt] table [x=lambda,y=n]{data/handy_mit_kerb.txt};
+              \addlegendentry{$\varphi=\ang{0}$}
+              \addplot[color=green,  line width = 0.5pt] table [x=lambda,y=n]{data/handy_mit_kerb_5_grad.txt};
+              \addlegendentry{$\varphi=\ang{5}$}
+              \addplot[color=orange,  line width = 0.5pt] table [x=lambda,y=n]{data/handy_mit_kerb_10_grad.txt};
+              \addlegendentry{$\varphi=\ang{10}$}
+              \addplot[color=magenta,  line width = 0.5pt] table [x=lambda,y=n]{data/handy_mit_kerb_15_grad.txt};
+              \addlegendentry{$\varphi=\ang{15}$}
+            \end{axis}
+          \end{tikzpicture}
+          \caption[Spektren einer Handytaschenlampe mit um den Winkel $\varphi$ gedrehten Winkel und ohne Kerbfilter.]{Spektren einer Handytaschenlampe mit um den Winkel $\varphi$ gedrehten Winkel und ohne Kerbfilter. Relevant ist die Verschiebung des durch den Kerbfilter entstehende Minimum des Transmissionsspektrum und dessen Verschiebung zu kürzeren Wellenlängen mit größer werdendem $\varphi$.}
+          \label{fig:kerbfilter-spektren}
+        \end{figure}
+
+
+
 
 
 
