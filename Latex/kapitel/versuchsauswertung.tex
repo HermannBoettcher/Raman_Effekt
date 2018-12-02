@@ -301,7 +301,7 @@
 
         Bei Betrachtung des Spektrum mit $\theta=\ang{90}$ fällt auf, dass nur die zum Maximum bei $\sim\SI{451}{\per\centi\meter}$ gehörende Schwingung polarisiert ist, während alle anderen depolarisiert sind.
 
-        \Cref{fig:tetraeder-schwingungen} zeigt die möglichen Schwingungen eines $\mathrm{XY_4}$-Moleküls (X, Y seien Elemente). Offensichtlich sind drei Schwingungen in der zweiten, bzw. dritte Zeile mit Drehungen und Spiegelungen an Ebenen ineinander überführbar. Das heißt die Schwingungen sind dreifach entartet und es sind insgesamt vier Fundamentalschwingungen zu erwarten. Die einzige symmetrische Schwingung ist die Schwingung $\nu_1$, welche somit dem Maximum bei $\sim\SI{451}{\per\centi\meter}$ zugeordnet werden kann.
+        \Cref{fig:tetraeder-schwingungen} zeigt die möglichen Schwingungen eines $\mathrm{XY_4}$-Moleküls (X, Y seien Elemente). Offensichtlich sind drei Schwingungen in der zweiten, bzw. dritte Zeile mit Drehungen und Spiegelungen an Ebenen ineinander überführbar. Das heißt die Schwingungen sind dreifach entartet. Weil auch die Schwingungen $\nu_{2j}$, $j\in\{a,b\}$, zweifach entartet ist, erwartet man insgesamt vier Fundamentalschwingungen. Die einzige symmetrische Schwingung ist die Schwingung $\nu_1$, welche somit dem Maximum bei $\sim\SI{451}{\per\centi\meter}$ zugeordnet werden kann.
         \medskip
 
         Weiter lässt sich die Streckschwingung eines C-Cl-Paares als Superposition der $\nu_{3i}$, $i\in\{ a,b,c\}$ darstellen. Für die Streckschwingung wurde in \cref{subsec:harm-oszi-absch} eine Raman-Verschiebung von $\nu_\mathrm{C-Cl}=\SI{988}{\per\centi\meter}$ abgeschätzt. Aufgrund des für die Abschätzung verwendeten vereinfachten Modells lässt sich hiermit die Zuordnung des Maximums bei $\sim \SI{777}{\per\centi\meter}$ zur den entarteten $\nu_{3i}$ Schwingungen aus \cref{fig:tetraeder-schwingungen}, trotz der großen Abweichung von über $\SI{200}{\per\centi\meter}$, rechtfertigen. Schließlich liegt wechselwirken bei der Überlagerung der Schwingungen mehr als nur die beiden für die Streckschwingung betrachteten Atome.
@@ -317,8 +317,6 @@
 
 
       \subsection{Chloroform und Deuterochloroform}
-
-        \Cref{fig:chcl3-cdcl3} zeigt die Spektren von Chloroform ($\mathrm{CHCl_3}$) und Deuterochloroform ($\mathrm{CDCl_3}$). Im Vergleich der jeweiligen Spektren mit Polarisationsfilter in Nullstellung und um $\ang{90}$ gedrehter Stellung fällt sofort auf, dass drei der sechs für beide Moleküle erscheinenden Maxima zu symmetrischen Schwingungen gehören. 
 
         \begin{figure}[p]
           \subfloat{
@@ -339,7 +337,7 @@
                 /pgf/number format/1000 sep={},
                 ]
                 % Add plots
-                \addplot[color=red,  line width = 1pt] table [x=raman,y=n]{data/CHCl3_pol0.txt};
+                      \addplot[color=red,  line width = 1pt] table [x=raman,y=n]{data/CHCl3_pol0.txt};
                 \addlegendentry{$\theta_\mathrm{pol}=\ang{0}$}
                 \addplot[color=blue,  line width = 1pt] table [x=raman,y=n]{data/CHCl3_pol1.txt};
                 \addlegendentry{$\theta_\mathrm{pol}=\ang{90}$}
@@ -371,10 +369,19 @@
               \end{axis}
             \end{tikzpicture}
             \label{fig:cdcl3}}
-          \caption{Spektren von $\mathrm{CHCl_3}$ \protect\subref{fig:chcl3} und $\mathrm{CDCl_3}$ \protect\subref{fig:cdcl3} mit Polarisationsfilter in Nullstellung und um $\ang{90}$ gedrehtem Filter.}
+          \caption[Spektren von $\mathrm{CHCl_3}$ \protect\subref{fig:chcl3} und $\mathrm{CDCl_3}$ \protect\subref{fig:cdcl3} mit Polarisationsfilter in Nullstellung und um $\ang{90}$ gedrehtem Filter.]{Spektren von $\mathrm{CHCl_3}$ \protect\subref{fig:chcl3} und $\mathrm{CDCl_3}$ \protect\subref{fig:cdcl3} mit Polarisationsfilter in Nullstellung und um $\ang{90}$ gedrehtem Filter. Drei der jeweils, bei Nullpolarisationsstellung auftretenden sechs Maxima, verschwinden bei gedrehtem polarisationsfilter und gehören damit symmetrischen Molekülschwingungen an.}
           \label{fig:chcl3-cdcl3}
         \end{figure}
 
+        \Cref{fig:chcl3-cdcl3} zeigt die Spektren von Chloroform ($\mathrm{CHCl_3}$) und Deuterochloroform ($\mathrm{CDCl_3}$). Das Ersetzen eines Chlor-Atoms durch ein Wasserstoff- oder Deuterium-Atom führt zu einer Symmetriebrechung des Tetraeder und  damit zur Aufspaltung der bei $\mathrm{CCl_4}$ beobachteten, dreifach entarteten Schwingungen in jeweils eine weiterhin entartete und eine weitere Schwingung. Dementsprechend sind zunächst sieben anstelle der bei $\mathrm{CCl_4}$ beobachteten fünf Linien zu erwarten.
+
+        Im Vergleich der jeweiligen Spektren mit Polarisationsfilter in Nullstellung und um $\ang{90}$ gedrehter Stellung fällt sofort auf, dass drei der sechs für beide Moleküle erscheinenden Maxima zu symmetrischen Schwingungen gehören.
+
+        \begin{figure}[tb]
+          \includegraphics[width=\textwidth]{figures/ch3cl.png}
+          \caption[Normalschwingungen eines $\mathrm{CH_3Cl}$-Moleküls; analog betrachtbar für ein $\mathrm{CHCl_3}$-Molekül.]{Normalschwingungen eines $\mathrm{CH_3Cl}$-Moleküls; analog betrachtbar für ein $\mathrm{CHCl_3}$-Molekül. Von den zu erwartenden neun Schwingungen sind aufgrund der Entartung nur sechs Schwingungen abgebildet. \cite{herzberg}}
+          \label{}
+        \end{figure}
 
 
 
