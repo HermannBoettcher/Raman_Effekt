@@ -482,7 +482,7 @@
 
         Zunächst wird das Spektrum von Dichlormethan ($\mathrm{CH_2Cl_2}$) mit Polarisationsfilter in Nullstellung mit dem Spektrum von $\mathrm{CHCl_3}$ verglichen (vgl. \cref{fig:chcl3-ch2cl2}). Offenbar spaltet das Maximum der C-H-Streckschwingung bei $\sim\SI{3020}{\per\centi\meter}$ zu zwei Maxima auf. Eines davon, das Prominente, ist weiterhin fast vollständig polarisiert, das andere ist teilweise depolarisiert (vgl. \cref{fig:ch2cl2}). Das polarisierte Maximum lässt sich hiermit der symmetrischen Schwingung $\nu_1$, das depolarisiert der zur $\mathrm{CCl_2}$-Ebene antisymmetrischen Schwingung $\nu_6$ in \cref{fig:ch2cl2-schwingungen} zuordnen.
 
-        Weiter erscheint bei $\sim\SI{2830}{\per\centi\meter}$ ein bisher nicht bebachtetes vollständig polarisiertes Maximum. Die restliche Maxima verschieben im Bereich der Raman-Verschiebung $\Delta \nu < \SI{1500}{\per\centi\meter}$ verschieben sich. Sichtbar ist, dass die C-Cl-Streckschwingung weiter bestehen bei $\sim\SI{705}{\per\centi\meter}$ als fast vollständig polarisiertes Maximum bestehen bleibt ($\nu_3$ in \cref{fig:ch2cl2-schwingungen}). Da Streckschwingungen hochenergetischer als Biegeschwingungen sind kann so geschlossen werden, dass die C-$\mathrm{Cl_2}$-Vibrationen bei niedrigeren Raman-Verscheibungen zu finden sein müssen. Jedoch bleibt nur ein teilweise depolarisiertes Maximum bei $\sim\SI{282}{\per\centi\meter}$ im aufgenommenen Spektrum, während zwei Vibrationen zu zuzuordnen sind. 
+        Weiter erscheint bei $\sim\SI{2830}{\per\centi\meter}$ ein bisher nicht bebachtetes vollständig polarisiertes Maximum. Die restliche Maxima verschieben im Bereich der Raman-Verschiebung $\Delta \nu < \SI{1500}{\per\centi\meter}$ verschieben sich. Sichtbar ist, dass die C-Cl-Streckschwingung weiter bestehen bei $\sim\SI{705}{\per\centi\meter}$ als fast vollständig polarisiertes Maximum bestehen bleibt ($\nu_3$ in \cref{fig:ch2cl2-schwingungen}). Da Streckschwingungen hochenergetischer als Biegeschwingungen sind kann so geschlossen werden, dass die C-$\mathrm{Cl_2}$-Vibrationen bei niedrigeren Raman-Verscheibungen zu finden sein müssen. Jedoch bleibt nur ein teilweise depolarisiertes Maximum bei $\sim\SI{282}{\per\centi\meter}$ im aufgenommenen Spektrum, während zwei Vibrationen zu zuzuordnen sind.
 
         \begin{figure}
           \centering
@@ -549,6 +549,140 @@
           \caption[Aufgezeichnete Spektren von $\mathrm{CH_2Cl_2}$ und mögliche Schwingungen des Moleküls.]{\protect\subref{fig:chcl3-ch2cl2} Aufgezeichnete Spektren von $\mathrm{CH_2Cl_2}$ im Vergleich mit $\mathrm{CHCL_3}$, jeweils mit Polarisationsfilter in Nullstellung. \protect\subref{fig:ch2cl2} Spektren von $\mathrm{CH_2Cl_2}$ mir Winkel des Polarisationsfilter $\theta=\ang{0},\ang{90}$. \protect\subref{fig:ch2cl2} Mögliche Schwingungen des $\mathrm{CH_2Cl_2}$-Moleküls. \cite{herzberg}}
           \label{fig:ch2cl2-analyse}
         \end{figure}
+
+
+    \section{Kohlenstoffwasserstoff-Ringe}
+
+      \begin{figure}[tb]
+        \centering
+        \subfloat[]{
+        \tikzsetnextfilename{C6H6}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.45*\textwidth,
+              height=0.45*\textwidth,
+              grid,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              every axis plot,
+              xmin = 0, xmax = 3500,
+              %ymin = \Pmin, ymax = \Pmax,
+              xlabel = {Raman-Verschiebung $\Delta \nu$ in $\si{\per\centi\meter}$},
+              ylabel = {Zählrate $n$},
+              %xtick = {0,500, 1000, ..., 3500},
+              /pgf/number format/use comma,
+              /pgf/number format/1000 sep={},
+              ]
+              % Add plots
+              %\addplot[color=red,  line width = 0.5pt] table [x=raman,y=n]{data/CCl4_pol0.txt};
+              %\addlegendentry{$\mathrm{CCl_4}$}
+              \addplot[color=red,  line width = 0.5pt] table [x=raman,y=n]{data/C6H6_pol0.txt};
+              \addlegendentry{$\theta_\mathrm{pol}=\ang{0}$}
+              \addplot[color=blue,  line width = 0.5pt] table [x=raman,y=n]{data/C6H6_pol1.txt};
+              \addlegendentry{$\theta_\mathrm{pol}=\ang{90}$}
+            \end{axis}
+          \end{tikzpicture}
+          \label{fig:c6h6}
+        }
+        \subfloat[]{
+        \tikzsetnextfilename{C6H12}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.45*\textwidth,
+              height=0.45*\textwidth,
+              grid,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              every axis plot,
+              xmin = 0, xmax = 3500,
+              %ymin = \Pmin, ymax = \Pmax,
+              xlabel = {Raman-Verschiebung $\Delta \nu$ in $\si{\per\centi\meter}$},
+              ylabel = {Zählrate $n$},
+              %xtick = {0,500, 1000, ..., 3500},
+              /pgf/number format/use comma,
+              /pgf/number format/1000 sep={},
+              ]
+              % Add plots
+              \addplot[color=red,  line width = 0.5pt] table [x=raman,y=n]{data/C6H12_pol0.txt};
+              \addlegendentry{$\theta_\mathrm{pol}=\ang{0}$}
+              \addplot[color=blue,  line width = 0.5pt] table [x=raman,y=n]{data/C6H12_pol1.txt};
+              \addlegendentry{$\theta_\mathrm{pol}=\ang{90}$}
+            \end{axis}
+          \end{tikzpicture}
+          \label{fig:c6h12}
+        } \\
+        \subfloat[]{
+        \tikzsetnextfilename{C6H5NO2}
+          \begin{tikzpicture}
+            \begin{axis}[
+              /tikz/line join=bevel,
+              width=0.45*\textwidth,
+              height=0.45*\textwidth,
+              grid,
+              legend style={at={(1,1)}, legend columns=1, anchor=north east},
+              every axis plot,
+              xmin = 0, xmax = 3500,
+              %ymin = \Pmin, ymax = \Pmax,
+              xlabel = {Raman-Verschiebung $\Delta \nu$ in $\si{\per\centi\meter}$},
+              ylabel = {Zählrate $n$},
+              %xtick = {0,500, 1000, ..., 3500},
+              /pgf/number format/use comma,
+              /pgf/number format/1000 sep={},
+              ]
+              % Add plots
+              \addplot[color=red,  line width = 0.5pt] table [x=raman,y=n]{data/C6H5NO2_pol0.txt};
+              \addlegendentry{$\theta_\mathrm{pol}=\ang{0}$}
+              \addplot[color=blue,  line width = 0.5pt] table [x=raman,y=n]{data/C6H5NO2_pol1.txt};
+              \addlegendentry{$\theta_\mathrm{pol}=\ang{90}$}
+            \end{axis}
+          \end{tikzpicture}
+          \label{fig:c6h5no2}
+        }
+        \subfloat{
+        \begin{tikzpicture}
+            \chemfig{H-C*6(-C(-H)-C(-H)-C(-H)-C(-H)-C(-H)-)}
+        \end{tikzpicture}
+        \label{fig:benzol-ring}
+        }
+        \caption[Spektren der Kohlenstoffwasserstoff-Ringe und exemplarische Struktur eines Benzolrings.]{Spektren der Kohlenstoffwasserstoff-Ringe \protect\subref{fig:c6h6} $\mathrm{C_6H_6}$, \protect\subref{fig:c6h12} $\mathrm{C_6H_{12}}$, \protect\subref{fig:c6h5no2} $\mathrm{C_6H_5NO_2}$. \protect\subref{fig:benzol-ring} zeigt die Struktur eines Benzolrings.}
+        \label{fig:ringe}
+      \end{figure}
+
+      \Cref{fig:ringe} zeigt die Spektrend er zyklischen Kohlenstoffwasserstoff-Ringe Benzol ($\mathrm{C_6H_6}$), Cyclohexan ($\mathrm{C_6H_{12}}$) und Nitrobenzol ($\mathrm{C_6H_5NO_2}$).
+
+
+  \section{Messung der Temperatur von Schwefel}
+
+    \begin{figure}
+      \tikzsetnextfilename{schwefel}
+      \begin{tikzpicture}
+        \begin{axis}[
+          /tikz/line join=bevel,
+          width=0.45*\textwidth,
+          height=0.45*\textwidth,
+          grid,
+          legend style={at={(1,1)}, legend columns=1, anchor=north east},
+          every axis plot,
+          xmin = 0, xmax = 3100,
+          %ymin = \Pmin, ymax = \Pmax,
+          xlabel = {Raman-Verschiebung $\Delta \nu$ in $\si{\per\centi\meter}$},
+          ylabel = {Zählrate $n$},
+          xtick = {0,500, 1000, ..., 3000},
+          /pgf/number format/use comma,
+          /pgf/number format/1000 sep={},
+          ]
+          % Add plots
+          \addplot[color=red,  line width = 0.5pt] table [x=raman,y=n]{data/Schwefel_pol0.txt};
+          \addlegendentry{$\theta_\mathrm{pol}=\ang{0}$}
+        \end{axis}
+      \end{tikzpicture}
+      \caption{}
+      \label{}
+    \end{figure}
+
+
+
+
 
 
 
