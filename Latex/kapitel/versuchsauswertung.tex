@@ -200,41 +200,45 @@
         \end{figure}
 
 
+
+
+    \section{Abschätzung der zu erwartenden Raman-Verschiebungen}
+    \label{subsec:harm-oszi-absch}
+
+      Zunächst soll anhand eines einfachen harmonischen Oszillator Modells zweier Atome die zu erwartenden Raman-Verschiebungen in Abhängikeit der beteiligten Elemente abgeschätzt werden (vgl. \cref{subsec:harm-oszi-absch}).
+
+      Als Basis der theoretischen Erwartung dient die Streckschwingung einer H-H-Bindung, deren Raman-Verschiebung nach \cite{herzberg} bei
+      \begin{equation*}
+        \nu_\mathrm{H-H}=\frac{1}{\lambda_0}-\frac{1}{\lambda}=\SI{4160}{\per\centi\meter},
+      \end{equation*}
+      mit der Wellenlänge des eingestrahlten Lichts $\lambda_0$ und der Wellenlänge der Raman-Maxima $\lambda$, liegt. Mit \cref{eq:omega} ergibt sich die Bindungsenergie des harmonischen Oszillators zu
+      \begin{equation*}
+        E=\frac{\mu}{2}\omega^2x_0^2=\frac{\mu}{2}\left[ 2\pi c \underbrace{\left( \frac{1}{\lambda_0} - \frac{1}{\lambda} \right)}_{=\nu} \right]^2x_0^2
+      \end{equation*}
+      wobei $\mu$ wie zuvor die reduzierte Masse ist und $c$ die Lichtgeschwindigkeit. Unter der Annahme, dass die Bindungsenergie für andere Atome gleich groß ist, folgt der Zusammenhang
+      \begin{equation}
+        \nu_\mathrm{Atom1-Atom2}=\sqrt{\frac{\mu_\mathrm{H-H}}{\mu_\mathrm{Atom-1-Atom2}}}\cdot \nu_\mathrm{H-H}.
+        \label{eq:theo-raman-versch}
+      \end{equation}
+      Damit ergeben sich die in Tabelle \cref{tbl:theo-raman-versch} aufgeführten Raman-Verschiebungen für ausgewählte, in folgender Analyse relevanten, Atombindungen. Zur Berechnung wurden die in \cite{NIST_MASS} aufgeführten Atommassen verwendet.
+
+      \begin{table}[tb]
+      \caption[Theoretische Raman-Verschiebung verschiedener Atomkombinationen auf Grundlage des harmonischen Oszillator Modells unter Vorraussetzung der H-H-Bindungsenergie.]{Theoretische Raman-Verschiebung verschiedener Atomkombinationen auf Grundlage des harmonischen Oszillator Modells unter Vorraussetzung der H-H-Bindungsenergie. Die Werte wurden mit der Raman-Verschiebung einer H-H-Bindung $\nu_\mathrm{H-H}=\SI{4160}{\per\centi\meter}$ \cite{herzberg} und den in \cite{NIST_MASS} aufgeführten Atommassen nach \cref{eq:theo-raman-versch} berechnet.}
+      \label{tbl:theo-raman-versch}
+      \selectfontsize{10pt}
+      \begin{tabu} {X[r]X[r]X[r]X[r]X[r]X[r]X[r]X[r]}
+        \unitoprule \\
+        &C-H  &C-D  &C-Cl &C-C  &O-H  &C-O  &N-O  \\
+        \unimidrule \\
+        $\Delta\nu$ $[\si{\nano\meter}]$ &3063 &2249 &988 &1206 &3033 &1128 &1081\\
+        \unitoprule \\
+      \end{tabu}
+      \end{table}
+
+
     \section{Chlormethane}
 
-      In diesem Abschnitt sollen die Spektren der gemessen Proben analysiert werden und damit Rückschlüsse auf die auftretenden Molekülschwingungen gezogen werden. Hierzu werden zunächst anhand eines einfachen harmonischen Oszillator Modells zweier Atome die zu erwartenden Raman-Verschiebungen in Abhängikeit der betiligten Elemente bestimmt (vgl. \cref{subsec:harm-oszi-absch}). Im Anschluss folgt die Betrachtung der aufgezeichneten Spektren und die Zuordnung derer Maxima zu Molekülschwinschungen.
-
-
-      \subsection{Abschätzung der zu erwartenden Raman-Verschiebungen}
-      \label{subsec:harm-oszi-absch}
-
-        Als Basis der theoretischen Erwartung dient die Streckschwingung einer H-H-Bindung, deren Raman-Verschiebung nach \cite{herzberg} bei
-        \begin{equation*}
-          \nu_\mathrm{H-H}=\frac{1}{\lambda_0}-\frac{1}{\lambda}=\SI{4160}{\per\centi\meter},
-        \end{equation*}
-        mit der Wellenlänge des eingestrahlten Lichts $\lambda_0$ und der Wellenlänge der Raman-Maxima $\lambda$, liegt. Mit \cref{eq:omega} ergibt sich die Bindungsenergie des harmonischen Oszillators zu
-        \begin{equation*}
-          E=\frac{\mu}{2}\omega^2x_0^2=\frac{\mu}{2}\left[ 2\pi c \underbrace{\left( \frac{1}{\lambda_0} - \frac{1}{\lambda} \right)}_{=\nu} \right]^2x_0^2
-        \end{equation*}
-        wobei $\mu$ wie zuvor die reduzierte Masse ist und $c$ die Lichtgeschwindigkeit. Unter der Annahme, dass die Bindungsenergie für andere Atome gleich groß ist, folgt der Zusammenhang
-        \begin{equation}
-          \nu_\mathrm{Atom1-Atom2}=\sqrt{\frac{\mu_\mathrm{H-H}}{\mu_\mathrm{Atom-1-Atom2}}}\cdot \nu_\mathrm{H-H}.
-          \label{eq:theo-raman-versch}
-        \end{equation}
-        Damit ergeben sich die in Tabelle \cref{tbl:theo-raman-versch} aufgeführten Raman-Verschiebungen für ausgewählte, in folgender Analyse relevanten, Atombindungen. Zur Berechnung wurden die in \cite{NIST_MASS} aufgeführten Atommassen verwendet.
-
-        \begin{table}[tb]
-        \caption[Theoretische Raman-Verschiebung verschiedener Atomkombinationen auf Grundlage des harmonischen Oszillator Modells unter Vorraussetzung der H-H-Bindungsenergie.]{Theoretische Raman-Verschiebung verschiedener Atomkombinationen auf Grundlage des harmonischen Oszillator Modells unter Vorraussetzung der H-H-Bindungsenergie. Die Werte wurden mit der Raman-Verschiebung einer H-H-Bindung $\nu_\mathrm{H-H}=\SI{4160}{\per\centi\meter}$ \cite{herzberg} und den in \cite{NIST_MASS} aufgeführten Atommassen nach \cref{eq:theo-raman-versch} berechnet.}
-        \label{tbl:theo-raman-versch}
-        \selectfontsize{10pt}
-        \begin{tabu} {X[r]X[r]X[r]X[r]X[r]X[r]X[r]X[r]}
-          \unitoprule \\
-          &C-H  &C-D  &C-Cl &C-C  &O-H  &C-O  &N-O  \\
-          \unimidrule \\
-          $\Delta\nu$ $[\si{\nano\meter}]$ &3063 &2249 &988 &1206 &3033 &1128 &1081\\
-          \unitoprule \\
-        \end{tabu}
-        \end{table}
+      In diesem Abschnitt werde die Spektren der betrachteten Chlormethane analysiert. Ziel ist die Zuordnung der auftretenden Raman-Linien zu den  Molekülschwingungen. Weiter wird mithilfe des eingeführten harmonischen Oszillator Modells die Veränderung der Raman-Linien bei Austauschen eines, oder mehrerer Atome in einem Molekül vorherzusagen versucht.
 
 
       \subsection{Tetrachlormethan}
@@ -551,7 +555,30 @@
         \end{figure}
 
 
-    \section{Kohlenstoffwasserstoff-Ringe}
+    \section{Kohlenstoffringe}
+
+      \begin{figure}[tb]
+        \subfloat[]{
+          \chemfig{H-C*6(=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)}
+          \label{fig:c6h6-molecule}
+        }
+        \subfloat[]{
+          \chemfig{C(-[::210]H)(-[::150]H)*6(-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-)}
+          \label{fig:c6h12-molecule}
+        }
+        \subfloat[]{
+          \chemfig{N(=[::210]O)(-[::150]O)-C*6(=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)}
+          \label{fig:c6h5no2-molecule}
+        }
+        \caption[Molekülstrukturen der untersuchten Kohlenstoffringe.]{Molekülstrukturen der untersuchten Kohlenstoffringe. \protect\subref{fig:c6h6-molecule} Benzolring ($\mathrm{C_6H_6}$) \protect\subref{fig:c6h12} Cyclohexan ($\mathrm{C_6H_{12}}$) \protect\subref{fig:c6h5no2-molecule} Nitrobenzol ($\mathrm{C_6H_5NO_2}$)}
+        \label{fig:kohlenstoffringe-molekuele}
+      \end{figure}
+
+      Die Molekülstrukturen der untersuchten Kohlenstoffringe Benzol ($\mathrm{C_6H_6}$), Cyclohexan ($\mathrm{C_6H_{12}}$) und Nitrobenzol ($\mathrm{C_6H_5NO_2}$) sind in \cref{fig:kohlenstoffringe-molekuele} dargestellt. Der bei jedem der Moleküle auftretenden innere Kohlenstoffring lässt eine starke Raman-Linie bei entsprechend der C-C-Streckschwingung bei $\SI{1206}{\per\centi\meter}$ (vgl. \cref{subsec:harm-oszi-absch}) erwarten. Weiter enthalten alle Moleküle mindestens fünf C-H-Bindungen, sodass außerdem deren Streckschwingung als Maximum in den Spektren bei $\SI{3063}{per\centi\meter}$ (vgl. \cref{subsec:harm-oszi-absch}) zu erwarten ist.
+
+      Die aufgenommenen Spektren sind in \cref{fig:ringe} abgebildet. Sowohl für $\mathrm{C_6H_6}$, als auch für $\mathrm{C_6H_5NO_2}$ sind die die Raman-Linie der C-H-Streckschwingung an erwarteter Stelle zu finden. Lediglich beim $\mathrm{C_6H_{12}}$-Molekül treten anstelle der einzelnen Linie zwei, zu etwas kleineren Raman-Verschiebungen verschobene Maxima auf. Diese können als die beiden Streckschwingungen der $\mathrm{CH_2}$-Moleküle identifiziert werden.
+
+      Da die C-H-Streckschwingung symmetrisch ist, muss das Maximum stark polarisiert sein. Enstprechend werden die Maxima des Benzolrings bei $\sim\SI{994}{\per\centi\meter}$, des Cyclohexanrings bei $\sim\SI{801}{\per\centi\meter}$ und des Nitrobenzolrings bei $\sim\SI{1003}{\per\centi\meter}$ dieser Schwingung zugeordnet. Bei letzter ist nicht auszuschließen, dass einer der anderen Maxima in diesem Bereich der Raman-Verschiebung der Richtige ist, da alle größteteils polarisiert sind. Jedoch ist die Molekularstruktur derer von Benzol so ähnlich, dass eine äquivalente Raman-Verschiebung zu erwarten ist. Die zugeordnete Streckschwingung wird als Streckung des Rings bezeichnet, da bei gleichphasigem Schwingen der C-C-Bindungen der Durchmesser des Rings ändert.
 
       \begin{figure}[tb]
         \centering
@@ -638,36 +665,51 @@
           \end{tikzpicture}
           \label{fig:c6h5no2}
         }
-        \subfloat{
-        \begin{tikzpicture}
-            \chemfig{H-C*6(-C(-H)-C(-H)-C(-H)-C(-H)-C(-H)-)}
-        \end{tikzpicture}
-        \label{fig:benzol-ring}
-        }
-        \caption[Spektren der Kohlenstoffwasserstoff-Ringe und exemplarische Struktur eines Benzolrings.]{Spektren der Kohlenstoffwasserstoff-Ringe \protect\subref{fig:c6h6} $\mathrm{C_6H_6}$, \protect\subref{fig:c6h12} $\mathrm{C_6H_{12}}$, \protect\subref{fig:c6h5no2} $\mathrm{C_6H_5NO_2}$. \protect\subref{fig:benzol-ring} zeigt die Struktur eines Benzolrings.}
+        \caption[Spektren der Kohlenstoffwasserstoff-Ringe und exemplarische Struktur eines Benzolrings.]{Spektren der Kohlenstoffwasserstoff-Ringe \protect\subref{fig:c6h6} $\mathrm{C_6H_6}$, \protect\subref{fig:c6h12} $\mathrm{C_6H_{12}}$, \protect\subref{fig:c6h5no2} $\mathrm{C_6H_5NO_2}$. }
         \label{fig:ringe}
       \end{figure}
 
       \Cref{fig:ringe} zeigt die Spektrend er zyklischen Kohlenstoffwasserstoff-Ringe Benzol ($\mathrm{C_6H_6}$), Cyclohexan ($\mathrm{C_6H_{12}}$) und Nitrobenzol ($\mathrm{C_6H_5NO_2}$).
 
 
-  \section{Messung der Temperatur von Schwefel}
+  \section{Temperaturbestimmung von kristallinem Schwefel}
+
+    Durch das Verhältnis der Zählraten von Stokes- und Anti-Stokes-Maximum der prominenten Eigenschwingung von Schwefel soll hier die Temperatur des kristallinen Schwefels bestimmt werden. Dazu werden die Maxima bei $\sim\pm\SI{470}{\per\centi\meter}$ des in \cref{fig:schwefel} betrachtet. Aufgrund der Breite der Maxima und des Umstandes, dass das Rayleigh-Maximum nicht genau auf $\nu=\SI{0}{\per\centi\meter}$ liegt, wird ein Fehler von
+    \begin{equation*}
+      \delta \nu = \pm\SI{10}{\per\centi\meter}
+    \end{equation*}
+    angenommen.
+
+    Umformen von gleichung \cref{eq:stokesvergleich} nach der Temperatur $T$ ergibt unter Verwendung von
+    \begin{equation*}
+      \omega_n = 2\pi c \Delta \nu_\mathrm{Stokes}
+    \end{equation*}
+    und der Kreisfrequenz der Laserstrahlung
+    \begin{equation*}
+      \omega = \frac{2\pi c}{\lambda_\mathrm{L}},
+    \end{equation*}
+    mit $\lambda_\mathrm{L}=\SI{532}{\nano\meter}$, gerade
+    \begin{equation*}
+      T = \frac{h \Delta \nu  c}{k_\mathrm{B}\ln\left[ \frac{n_\mathrm{Stokes}}{n_\mathrm{Anti-Stokes}} \left( \frac{\frac{1}{\lambda_\mathrm{L}} - \Delta \nu_\mathrm{Stokes}}{\frac{1}{\lambda_\mathrm{L}}+\Delta \nu_\mathrm{Stokes}} \right)^4 \right]}=\SI{19}{\celsius},
+    \end{equation*}
+    wobei $n_\mathrm{Stokes},n_\mathrm{Anti-Stokes}$ die entsprechenden Zählraten von Stokes- und Anti-Stokes-Maximum sind. Weiter bezeichnet $h$ das Plancksche Wirkungsquantum, $k_\mathrm{B}$ die Boltzmann-Konstante.
 
     \begin{figure}
+      \centering
       \tikzsetnextfilename{schwefel}
       \begin{tikzpicture}
         \begin{axis}[
           /tikz/line join=bevel,
-          width=0.45*\textwidth,
-          height=0.45*\textwidth,
+          width=0.8*\textwidth,
+          height=0.5*\textwidth,
           grid,
           legend style={at={(1,1)}, legend columns=1, anchor=north east},
           every axis plot,
-          xmin = 0, xmax = 3100,
+          xmin = -600, xmax = 600,
           %ymin = \Pmin, ymax = \Pmax,
           xlabel = {Raman-Verschiebung $\Delta \nu$ in $\si{\per\centi\meter}$},
           ylabel = {Zählrate $n$},
-          xtick = {0,500, 1000, ..., 3000},
+          %xtick = {0,500, 1000, ..., 3000},
           /pgf/number format/use comma,
           /pgf/number format/1000 sep={},
           ]
@@ -676,9 +718,10 @@
           \addlegendentry{$\theta_\mathrm{pol}=\ang{0}$}
         \end{axis}
       \end{tikzpicture}
-      \caption{}
-      \label{}
+      \caption[Spektrum von kristallinem Schwefel.]{Spektrum von kristallinem Schwefel. Wichtig für die Auswertung sind die Zählraten der prominenten Stokes- und Anti-Stokes-Maxima.}
+      \label{fig:schwefel}
     \end{figure}
+
 
 
 

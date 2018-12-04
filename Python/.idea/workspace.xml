@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2820fde2-887e-4464-9ae6-560b4dfe2e60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Latex/bericht.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/bericht.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/kapitel/versuchsauswertung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/kapitel/versuchsauswertung.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/tikzpictures/CDCl3.md5" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/tikzpictures/CDCl3.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/tikzpictures/CDCl3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/tikzpictures/CDCl3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/tikzpictures/CHCl3.md5" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/tikzpictures/CHCl3.md5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/tikzpictures/CHCl3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/tikzpictures/CHCl3.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/ccl4.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/ccl4.py" afterDir="false" />
     </list>
@@ -21,12 +15,12 @@
     <session id="-1882876729">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,12 +35,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="757" />
+          <entry key="py" value="1009" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="757" />
+          <entry key="Python" value="1009" />
         </counts>
       </usages-collector>
     </session>
@@ -68,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data/ccl4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="315">
+              <caret line="21" column="132" lean-forward="true" selection-start-line="21" selection-start-column="132" selection-end-line="21" selection-end-column="132" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -336,8 +330,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/ccl4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="315">
+          <caret line="21" column="132" lean-forward="true" selection-start-line="21" selection-start-column="132" selection-end-line="21" selection-end-column="132" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
