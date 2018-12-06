@@ -675,6 +675,7 @@
 
 
   \section{Temperaturbestimmung von kristallinem Schwefel}
+  \label{sec:schwefel}
 
     Durch das Verhältnis der Zählraten von Stokes- und Anti-Stokes-Maximum der prominenten Eigenschwingung von Schwefel soll hier die Temperatur des kristallinen Schwefels bestimmt werden. Dazu werden die Maxima bei $\sim\pm\SI{470}{\per\centi\meter}$ des in \cref{fig:schwefel} betrachtet. Aufgrund der Breite der Maxima und des Umstandes, dass das Rayleigh-Maximum nicht genau auf $\nu=\SI{0}{\per\centi\meter}$ liegt, wird ein Fehler von
     \begin{equation*}
@@ -699,7 +700,7 @@
       N_\mathrm{Stokes}=\int_{\Delta \nu = 450}^{\Delta \nu = 500}\Delta n(\Delta \nu') \mathrm{d}\Delta\nu', \\
       N_\mathrm{Anti-Stokes}=\int_{\Delta \nu = -500}^{\Delta \nu = -450}\Delta n(\Delta \nu') \mathrm{d}\Delta\nu'.
     \end{align*}
-    Während eine Änderung des Zählratenverhältnisses von $\pm\SI{10}{\percent}$ mit einer Temperaturänderung von $\Delta T \approx \SI{13\celsius} $ einhergeht, ändert eine $\SI{10}{percent}$-ige Änderung der Raman-Verschiebung die Temperatur bereits um $\Delta T\approx\SI{30}{\celsius}$. Die entsprechende Änderung der Wellenlänge des Lasers ändert die Temperatur lediglich um $\Delta T\approx \SI{3}\celsius}$.
+    Während eine Änderung des Zählratenverhältnisses von $\pm\SI{10}{\percent}$ mit einer Temperaturänderung von $\Delta T \approx \SI{13}{\celsius} $ einhergeht, ändert eine $\SI{10}{\percent}$-ige Änderung der Raman-Verschiebung die Temperatur bereits um $\Delta T\approx\SI{30}{\celsius}$. Die entsprechende Änderung der Wellenlänge des Lasers ändert die Temperatur lediglich um $\Delta T\approx \SI{3}{\celsius}$.
 
     Aufgrund der Symmetrie von Anti-Stokes- und Stokes- Maximum ist die mögliche Verschiebung der Raman-Linie jedoch sehr beschränkt. Es ist wegen der Abweichung von $\Delta \nu <\SI{4}{\per\centi\meter}$ mit einer maximalen Temperaturänderung von $\Delta T\approx\SI{1}{\celsius}$ zu rechnen.
 
@@ -734,12 +735,93 @@
       \caption[Spektrum von kristallinem Schwefel.]{Spektrum von kristallinem Schwefel. Wichtig für die Auswertung sind die Zählraten der prominenten Stokes- und Anti-Stokes-Maxima.}
       \label{fig:schwefel}
     \end{figure}
-add
 
   \section{Bestimmung eines Ethanol-Wasser-Mischungsverhältnisses}
+  \label{sec:ethanol}
 
+    \begin{figure}[tb]
+      \centering
+      \subfloat[]{
+        \tikzsetnextfilename{ethanol_vgl}
+        \begin{tikzpicture}
+          \begin{axis}[
+            /tikz/line join=bevel,
+            width=0.45*\textwidth,
+            height=0.45*\textwidth,
+            grid,
+            legend style={at={(1,1)}, legend columns=1, anchor=north east},
+            every axis plot,
+            xmin = 2700, xmax = 3700,
+            %ymin = \Pmin, ymax = \Pmax,
+            xlabel = {Raman-Verschiebung $\Delta \nu$ in $\si{\per\centi\meter}$},
+            ylabel = {Zählrate $n$},
+            %xtick = {0,500, 1000, ..., 3000},
+            /pgf/number format/use comma,
+            /pgf/number format/1000 sep={},
+            ]
+            % Add plots
+            \addplot[color=red, line width = 0.5pt] table [x=raman,y=n]{data/ethanol_wasser_2575_40000.txt};
+            \addlegendentry{$c_\mathrm{Ethanol}=\SI{25}{\percent}$}
+            \addplot[color=blue, line width = 0.5pt] table [x=raman,y=n]{data/ethanol_wasser_3070_40000.txt};
+            \addlegendentry{$c_\mathrm{Ethanol}=\SI{30}{\percent}$}
+            \addplot[color=green, line width = 0.5pt] table [x=raman,y=n]{data/ethanol_wasser_3565_40000.txt};
+            \addlegendentry{$c_\mathrm{Ethanol}=\SI{35}{\percent}$}
+            \addplot[color=orange, line width = 0.5pt] table [x=raman,y=n]{data/ethanol_wasser_4060_40000.txt};
+            \addlegendentry{$c_\mathrm{Ethanol}=\SI{40}{\percent}$}
+            \addplot[color=magenta, line width = 0.5pt] table [x=raman,y=n]{data/ethanol_wasser_4555_40000.txt};
+            \addlegendentry{$c_\mathrm{Ethanol}=\SI{45}{\percent}$}
+            \addplot[color=black, line width = 1pt] table [x=raman,y=n]{data/ethanol_wasser_40000.txt};
+            \addlegendentry{$c_\mathrm{Ethanol}=?\si{\percent}$}
+          \end{axis}
+        \end{tikzpicture}
+        \label{fig:ethanol-mischungen}
+      }
+      \subfloat[]{
+        \tikzsetnextfilename{ethanol_fit}
+        \begin{tikzpicture}
+          \begin{axis}[
+            /tikz/line join=bevel,
+            width=0.45*\textwidth,
+            height=0.45*\textwidth,
+            grid,
+            legend style={at={(1,1)}, legend columns=1, anchor=north east},
+            every axis plot,
+            xmin = 0, xmax = 0.6,
+            %ymin = \Pmin, ymax = \Pmax,
+            xlabel = {$c_\mathrm{Ethanol}$ in $\si{\percent}$},
+            ylabel = {$\frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}$},
+            %xtick = {0,500, 1000, ..., 3000},
+            /pgf/number format/use comma,
+            /pgf/number format/1000 sep={},
+            ]
+            % Add plots
+            \addplot[color=blue, only marks, line width = 0.5pt] table [x=konz,y=rel]{data/ethanol_data.txt};
+            \addlegendentry{Bekannte Mischungen}
+            \addplot[color=red, only marks, line width = 0.5pt] coordinates {(0.29,0.665)};
+            \addlegendentry{Unbekannte Mischung}
+            \addplot[color=green, line width = 0.5pt] {0.051267+2.1181*x};
+            \addlegendentry{Lineare Regression}
+          \end{axis}
+        \end{tikzpicture}
+        \label{fig:ethanol-fit}
+      }
+      \caption[Spektren von Ethanol-Wasser-Mischungen mit bekannten Ethanol-Konzentrationen $c_\mathrm{Ethanol}$ und einer Mischung unbekannter Konzentration, sowie lineare Regression des Zählratenverhältnisses von Ethanol und Wasser Maximum der verschiedenen Proben.]{Spektren von Ethanol-Wasser-Mischungen mit bekannten Ethanol-Konzentrationen $c_\mathrm{Ethanol}$ und einer Mischung unbekannter Konzentration, sowie lineare Regression des Zählratenverhältnisses von Ethanol und Wasser Maximum der verschiedenen Proben. \protect\subref{fig:ethanol-mischungen} Spektren der verschiedenen Mischungen. Offenbar fällt die Konzentration der unbekannten Mischung in den Rahmen der bekannten. \protect\subref{fig:ethanol-fit} Lineare Regression der Zählratenverhältnisse von Ethanol und Wasser Maximum für die verschiedenen Proben zur Einordnung der unbekannten Mischung (Korrektur der Ethanolkonzentration bereits berücksichtigt, vgl. \cref{sec:ethanol}).}
+      \label{}
+    \end{figure}
 
+    Zur Bestimmung einer unbekannten Konzentration $c_\mathrm{Ethanol}$ in einer Ethanol-Wasser-Mischung werden zunächst die Spektren von purem Ethanol, bzw. Wasser mit dem Spektrum der fraglichen Probe verglichen. Das Verhältnis der Höhe der Maxima führt zu einer Abschätzung der Konzentration auf $c_\mathrm{Ethanol}\approx\SI{40}{\percent}$. Da aufgrund deer verschiedenen Dichten von Ethanol und Wasser das Verhältnis der Höhe der Maxima nicht linear verläuft, werden nun mehrere Mischungen bekannter Konzentration zwischen $\SI{25}{\percent}$ und $\SI{55}{\percent}$ vermessen. Hierbei muss beachtet werden, dass das verwendete Ethanol als Industrieethanol einige Prozent Wasser enthält. Aufgrund der üblichen Handelsprodukte ist der Wassergehalt hier mit $c_\mathrm{Wasser}=\SI{5}{\percent}$ abgeschätzt.
 
+    Wie schon in \cref{sec:schwefel}, sind die Zählraten $N_\mathrm{Ethanol/Wasser}$ mit einem Integral berechnet. Für das Maximum von Ethanol wurden die Integrationsgrenzen $\SI{2850}{\per\centi\meter}$ und $\SI{3000}{\per\centi\meter}$ gewählt, für das Maximum von Wasser $\SI{3200}{\per\centi\meter}$ und $\SI{3450}{\per\centi\meter}$.
+
+    Die so erhaltenen Messpunkte sind inklusive der Korrektur der Ethanolkonzentration in \cref{fig:ethanol-fit} abgebildet. Hierbei wurden die Messpunkte für $c_\mathrm{Ethanol}=\SI{50}{\percent}, \SI{55}{\percent}$ weggelassen, da diese durch Messfehler Zählratenverhältnisse von $\sim{0,1}$ erbringen, welche physikalisch auszuschließen sind, lieferten.
+    \begin{equation*}
+      c_\mathrm{Ethanol}=\SI{29}{\percent}
+    \end{equation*}
+    ergibt sich durch Lösen der linearen Regression
+    \begin{equation*}
+      \frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}=\SI{0,05126(484)}{\percent}+\SI{2,1181(135)}{\percent}\cdot c_\mathrm{Ethanol}
+    \end{equation*}
+    an der Stelle $\frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}=0,6654$. Da die Fehler der Regressionsparameter viel zu gering sind, um die Messunsicherheiten des Experiments wiederzuspiegeln, wurde hier auf eine Fehlerfortpflanzung verzichtet. Eine Variation des Zählratenverhältnisses $\frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}$ führt zu einer Abweichung von $\sim \pm\SI{3}{\percent}$, während eine mögliche Abweichung des angenommenen Wasseranteil im Ethanol sich im Ergebnis kaum bemerkbar macht.
 
 
 
