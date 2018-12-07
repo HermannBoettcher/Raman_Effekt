@@ -4,21 +4,23 @@
 
   \chapter{Versuchsdurchführung und -auswertung}
 
-    Im folgenden Kapitel werden die einzelnen Schritte der Versuchsdurchführung und die jeweilige Analyse parallel beschrieben.
+    Der experimentelle Aufbau besteht aus einem frequenzverdoppelten Nd:YAG-Laser der Laserklasse 4, welcher auf eine Glasphiole fokussiert ist, welche wiederum die zu untersuchende Probe enthält. Das entstehende Streulicht (nicht der Laserstrahl selbst) wird mit einer Sammellinse auf ein Spektrometer (CCD-Sensor) kollimiert. Hierbei können ein Polarisationsfilter und ein drehbar montierter Kerbfilter zwischengeschaltet werden.
 
 
     \section{Vorbereitende Messungen}
 
+      Zur Auswertung der erfassten Daten sind einige vorbereitende Messungen notwendig. Das Dunkelspektrum muss berücksichtigt, das Spektrometer kalibriert und dessen Linearität überprüft und der Einfluss des Kerbfilters betrachtet werden.
+
 
       \subsection{Dunkelspektrum}
 
-        Das Spektrometer zeichnet auch ohne Einschalten des Lasers bereits Signale auf. Dies liegt in diesem Falle nicht am Streulicht anderer Lichtquellen im Raum, wie durch das Ausbleiben von Veränderungen im Signal während dem Ein- und Ausschalten von prominenten Lichtquellen wie der Deckenleucchte leicht bewiesen werden kann. Vielmehr kommt es in der Ladungsträgerzone der Dioden zu spontanen Elektron-Loch-Paar-Bildungen, welche als Photonen registriert werden. Mit dem zu Auswertung verwendeten Programm \textit{???} wird deshalb bei jeder Änderung der Integrationszeit während der Versuche ein neues Dunkelspektrum aufgezeichnet, das heißt mit geblocktem Laserstrahl einmal die Integrationszeit durchlaufen. Dieses Dunkelspektrum subtrahiert das Programm dann von jedem weiteren aufgenommenen Spektrum automatisch, sodass der Untergrund weitgehen bereinigt ist.
+        Durch eine Messung ohne eingeschalteten Laser fällt auf, dass das Spektrometer bereits Signale aufzeichnet, das sogenannte Dunkelspektrum. Dies liegt in diesem Falle nicht am Streulicht anderer Lichtquellen im Raum, wie durch das Ausbleiben von Veränderungen im Signal während dem Ein- und Ausschalten von prominenten Lichtquellen wie der Deckenleuchte leicht bewiesen werden kann. Vielmehr kommt es in der Ladungsträgerzone der Dioden zu spontanen Elektron-Loch-Paar-Bildungen, welche als Photonen registriert werden. Mit dem zu Auswertung verwendeten Programm wird deshalb bei jeder Änderung der Integrationszeit während der Versuche ein neues Dunkelspektrum aufgezeichnet, das heißt mit geblocktem Laserstrahl einmal die Integrationszeit durchlaufen. Dieses Dunkelspektrum subtrahiert das Programm dann von jedem weiteren aufgenommenen Spektrum automatisch, sodass der Untergrund weitgehen bereinigt ist.
 
 
       \subsection{Kalibrierung des Spektrometers}
       \label{subsec:kalibrierung}
 
-        \begin{figure}[tb]
+        \begin{figure}[htb]
           \centering
           \tikzsetnextfilename{hg_he_spektren}
           \begin{tikzpicture}
@@ -51,7 +53,7 @@
           \label{fig:hg-he-spektren}
         \end{figure}
 
-        Um die Wellenlängen-, bzw. Frequenz-Kalibrierung des Spektrometers zu prüfen und gegebenenfalls zu korrigieren werden zwei Messungen mit in der Literatur hinreichend präzise charakterisierten Lichtquellen durchgeführt. Die aufgezeichneten Spektren einer Quecksilberdampflampe und einer Heliumlampe sind in \cref{fig:hg-he-spektren} abgebildet.  Die charakteristischen Linien treten hier verbreitert in Erscheinung. Es liegen die Dopplerverbreiterung, die Verbreiterung durch die natürliche Linienbreite, sowie die linear mit dem Dampfdruck ansteigende Druckverbreiterung vor. Prominent ist hierbei die Dopplerverbreiterung. Wegen der gaussförmigen Maxwell-Boltzmann-Verteilung der Geschwindigkeit der Gasatome können die verbreiterten Linien zu Bestimmung der Position der Maxima mit Gaussfits approximiert werden. Diese sind ebenfalls in \cref{fig:hg-he-spektren} aufgetragen. Die so gemessenen Linienpositionen mitsamt der aus \cite{NIST_ASD} entnommenen Literaturwerte sind in \cref{tbl:charakteristische-linien} aufgeführt. Die bei den experimentellen Werten angegebenen Unsicherheiten sind lediglich die Fehler der Fitparameter. Diese sind natürlich deutlich zu klein, wenn die Unsicherheiten aufgrund der  und Messunsicherheiten der verwendeten Geräte selbst noch respektiert werden. Dementsprechend stimmen die gemessenen Wellenlängen der charakteristischen Linien der Lichtquellen, vor Allem unter berücksichtigung der Breite der Guassglocken, hinreichend präzise mit den Literaturwerten überein, um keine weiteren Korrekturen vornehmen zu müssen.
+        Um die Wellenlängen-, bzw. Frequenz-Kalibrierung des Spektrometers zu prüfen und gegebenenfalls zu korrigieren werden zwei Messungen mit in der Literatur hinreichend präzise charakterisierten Lichtquellen, ohne Positionierung einer Probe im Strahlengang, durchgeführt. Die aufgezeichneten Spektren einer Quecksilberdampflampe und einer Heliumlampe sind in \cref{fig:hg-he-spektren} abgebildet.  Die charakteristischen Linien treten hier verbreitert in Erscheinung. Es liegen die Dopplerverbreiterung, die Verbreiterung durch die natürliche Linienbreite, sowie die linear mit dem Dampfdruck ansteigende Druckverbreiterung vor. Prominent ist hierbei die Dopplerverbreiterung. Wegen der gaussförmigen Maxwell-Boltzmann-Verteilung der Geschwindigkeit der Gasatome können die verbreiterten Linien zu Bestimmung der Position der Maxima mit Gaussfits approximiert werden. Diese sind ebenfalls in \cref{fig:hg-he-spektren} aufgetragen. Die so gemessenen Linienpositionen mitsamt der aus \cite{NIST_ASD} entnommenen Literaturwerte sind in \cref{tbl:charakteristische-linien} aufgeführt. Die bei den experimentellen Werten angegebenen Unsicherheiten sind lediglich die Fehler der Fitparameter. Diese sind natürlich deutlich zu klein, wenn die Unsicherheiten aufgrund der  und Messunsicherheiten der verwendeten Geräte selbst noch respektiert werden. Dementsprechend stimmen die gemessenen Wellenlängen der charakteristischen Linien der Lichtquellen, vor Allem unter berücksichtigung der Breite der Guassglocken, hinreichend präzise mit den Literaturwerten überein, um keine weiteren Korrekturen vornehmen zu müssen.
         \medskip
 
         \begin{table}[tb]
@@ -75,44 +77,80 @@
       \label{subsec:linearitaet}
 
         \begin{figure}[tb]
-          \tikzsetnextfilename{linearity}
-          \begin{tikzpicture}
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              grid,
-              legend style={at={(1,1)}, legend columns=1, anchor=north east},
-              every axis plot,
-              xmin = 666, xmax = 671,
-              %ymin = \Pmin, ymax = \Pmax,
-              xlabel = {Wellenlänge $\lambda$ in $\si{\nano\meter}$},
-              ylabel = {Zählrate $n$},
-              ]
-              % Add plots
-              \addplot[color=red,  line width = 0.5pt] table [x=lambda,y=n]{data/he_50.txt};
-              \addlegendentry{$\SI{50}{\milli\second}$}
-              \addplot[color=blue,  line width = 0.5pt] table [x=lambda,y=n]{data/he_100.txt};
-              \addlegendentry{$\SI{100}{\milli\second}$}
-              \addplot[color=green,  line width = 0.5pt] table [x=lambda,y=n]{data/he_200.txt};
-              \addlegendentry{$\SI{200}{\milli\second}$}
-              \addplot[color=orange,  line width = 0.5pt] table [x=lambda,y=n]{data/he_400.txt};
-              \addlegendentry{$\SI{400}{\milli\second}$}
-              \addplot[color=purple,  line width = 0.5pt] table [x=lambda,y=n]{data/he_800.txt};
-              \addlegendentry{$\SI{800}{\milli\second}$}
-              \addplot[color=brown,  line width = 0.5pt] table [x=lambda,y=n]{data/he_2000.txt};
-              \addlegendentry{$\SI{2000}{\milli\second}$}
-              \addplot[color=violet,  line width = 0.5pt] table [x=lambda,y=n]{data/he_3000.txt};
-              \addlegendentry{$\SI{3000}{\milli\second}$}
-              \addplot[color=cyan,  line width = 0.5pt] table [x=lambda,y=n]{data/he_4000.txt};
-              \addlegendentry{$\SI{4000}{\milli\second}$}
-            \end{axis}
-          \end{tikzpicture}
-          \caption[Spektren der $\sim\SI{668}{\nano\meter}$-Linie der Heliumlampe bei verschiedenen Integrationszeiten zur Prüfung der Linearität des Spektrometers.]{Spektren der $\sim\SI{668}{\nano\meter}$-Linie der Heliumlampe bei verschiedenen Integrationszeiten zur Prüfung der Linearität des Spektrometers. Für weitere Ausführungen siehe \cref{subsec:linearitaet}}
+          \subfloat[]{
+            \tikzsetnextfilename{linearity}
+            \begin{tikzpicture}
+              \begin{axis}[
+                /tikz/line join=bevel,
+                width=0.45*\textwidth,
+                height=0.45*\textwidth,
+                grid,
+                legend style={at={(1,1)}, legend columns=1, anchor=north east},
+                every axis plot,
+                xmin = 666, xmax = 671,
+                %ymin = \Pmin, ymax = \Pmax,
+                xlabel = {Wellenlänge $\lambda$ in $\si{\nano\meter}$},
+                ylabel = {Zählrate $n$},
+                ]
+                % Add plots
+                \addplot[color=red,  line width = 0.5pt] table [x=lambda,y=n]{data/he_50.txt};
+                \addlegendentry{$\SI{50}{\milli\second}$}
+                \addplot[color=blue,  line width = 0.5pt] table [x=lambda,y=n]{data/he_100.txt};
+                \addlegendentry{$\SI{100}{\milli\second}$}
+                \addplot[color=green,  line width = 0.5pt] table [x=lambda,y=n]{data/he_200.txt};
+                \addlegendentry{$\SI{200}{\milli\second}$}
+                \addplot[color=orange,  line width = 0.5pt] table [x=lambda,y=n]{data/he_400.txt};
+                \addlegendentry{$\SI{400}{\milli\second}$}
+                \addplot[color=purple,  line width = 0.5pt] table [x=lambda,y=n]{data/he_800.txt};
+                \addlegendentry{$\SI{800}{\milli\second}$}
+                \addplot[color=brown,  line width = 0.5pt] table [x=lambda,y=n]{data/he_2000.txt};
+                \addlegendentry{$\SI{2000}{\milli\second}$}
+                \addplot[color=violet,  line width = 0.5pt] table [x=lambda,y=n]{data/he_3000.txt};
+                \addlegendentry{$\SI{3000}{\milli\second}$}
+                \addplot[color=cyan,  line width = 0.5pt] table [x=lambda,y=n]{data/he_4000.txt};
+                \addlegendentry{$\SI{4000}{\milli\second}$}
+              \end{axis}
+            \end{tikzpicture}
+            \label{fig:linearity}
+            }
+            \subfloat[]{
+            \tikzsetnextfilename{linear_fit}
+            \begin{tikzpicture}
+              \begin{axis}[
+                /tikz/line join=bevel,
+                width=0.45*\textwidth,
+                height=0.45*\textwidth,
+                grid,
+                legend style={at={(1,0)}, legend columns=1, anchor=south east},
+                every axis plot,
+                xmin = 0, xmax = 5,
+                ymin = 0, ymax = 35000,
+                xlabel = {Integrationszeit $t_\mathrm{int}$ in $\si{\second}$},
+                ylabel = {Zählrate $n$},
+                /pgf/number format/use comma,
+                /pgf/number format/1000 sep={},
+                ]
+                % Add plots
+              	\addplot[color=red, only marks] coordinates {
+              		(0.05,382.97)
+              		(0.1,827.38)
+              		(0.2,1605.61)
+              		(0.4,3205.07)
+              		(0.8,6782.87)
+              		(2,16725.76)
+              		(4,33572.35)
+              	};
+                \addlegendentry{Messpunkte}
+                \addplot[color=blue, line width=1pt] gnuplot{8386.15286*x};
+                \addlegendentry{Lineare Regression}
+              \end{axis}
+            \end{tikzpicture}
+            \label{fig:linearitaet}}
+          \caption[Spektren der $\sim\SI{668}{\nano\meter}$-Linie der Heliumlampe bei verschiedenen Integrationszeiten zur Prüfung der Linearität des Spektrometers und Auftragung der Maxima-Werte mit linearer Regression.]{\protect\subref{fig:linearity} Spektren der $\sim\SI{668}{\nano\meter}$-Linie der Heliumlampe bei verschiedenen Integrationszeiten zur Prüfung der Linearität des Spektrometers. \protect\subref{fig:linearitaet} Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten und lineare Regression gemäß \cref{eq:linear-fit}. Für weitere Ausführungen siehe \cref{subsec:linearitaet}}
           \label{fig:linearity}
         \end{figure}
 
-        Das Spektrometer zählt unter Verwendung von Dioden die, nach Wellenlänge sortierten, einfallenden Photon. Bei zeitlich konstanter Lichtquelle sollte also die Zahl $n$ der registrierten Photonen pro wellenlänge linear zunehmen. Um dies zu überprüfen sind in \cref{fig:linearity} die Spektren der Heliumlampe für verschiedene Integrationszeiten aufgetragen. An dieser Stelle ist zu beachten, dass das Spektrometer 16 Bit basiert ist und damit eine Zählrate von $2^{16}\approx 65000$ nicht überschreiten kann.
+        Das Spektrometer zählt unter Verwendung von Dioden die, nach Wellenlänge sortierten, einfallenden Photonen. Bei zeitlich konstanter Lichtquelle sollte also die Zahl $n$ der registrierten Photonen pro wellenlänge linear zunehmen. Um dies zu überprüfen sind in \cref{fig:linearity} die Spektren der Heliumlampe für verschiedene Integrationszeiten aufgetragen, wiederum ohne Probe im Strahlengang. An dieser Stelle ist zu beachten, dass das Spektrometer 16 Bit basiert ist und damit eine Zählrate von $2^{16}\approx 65000$ nicht überschreiten kann.
 
         Die Zählrate der lokalen $\sim\SI{668}{\nano\meter}$-Maxima der Spektren werden mithilfe von \textit{Python} aus den Rohdaten extrahiert, deses Mal ohne die Verwendung eines Fits. Aufgetragen über den Integrationszeiten ergibt sich, wie erwartet, ein linearer Zusammenhang, wie in \cref{fig:linearitaet} abgebildet ist. Die Gleichung der linearen Regression durch den Ursprung ist
         \begin{equation}
@@ -121,50 +159,8 @@
         \end{equation}
         Messpunkte und Regression liegen übereinander, was die Linearität des Spektrometers unterhalb der Sättigungsgrenze bestätigt.
 
-        \begin{figure}
-          \centering
-          \tikzsetnextfilename{linear_fit}
-          \begin{tikzpicture}
-            \begin{axis}[
-              /tikz/line join=bevel,
-              width=0.8*\textwidth,
-              height=0.5*\textwidth,
-              grid,
-              legend style={at={(1,0)}, legend columns=1, anchor=south east},
-              every axis plot,
-              xmin = 0, xmax = 5,
-              ymin = 0, ymax = 35000,
-              xlabel = {Integrationszeit $t_\mathrm{int}$ in $\si{\second}$},
-              ylabel = {Zählrate $n$},
-              /pgf/number format/use comma,
-              /pgf/number format/1000 sep={},
-              ]
-              % Add plots
-            	\addplot[color=red, only marks] coordinates {
-            		(0.05,382.97)
-            		(0.1,827.38)
-            		(0.2,1605.61)
-            		(0.4,3205.07)
-            		(0.8,6782.87)
-            		(2,16725.76)
-            		(4,33572.35)
-            	};
-              \addlegendentry{Messpunkte}
-              \addplot[color=blue, line width=1pt] gnuplot{8386.15286*x};
-              \addlegendentry{Lineare Regression}
-            \end{axis}
-          \end{tikzpicture}
-          \caption[Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten (vgl. \cref{fig:linearity}) und lineare Regression.]{Messpunkte der $\sim\SI{668}{\nano\meter}$-Maxima der Heliumlampen-Spektren bei verschiedenen Integrationszeiten und lineare Regression gemäß \cref{eq:linear-fit}.}
-          \label{fig:linearitaet}
-        \end{figure}
 
-
-      \subsection{Kerbfilter}
-      \label{subsec:kerbfilter}
-
-        Um die Breite und Position des Wellenlängenbereichs, welchen der Kerbfilter blockt, zu messen, wird eine Handytaschenlampe als breitbandige Lichtquelle genutzt. \Cref{fig:kerbfilter-spektren} zeigt Spektren des Handys mit und ohne Kerbfilte im Strahlengang. Dabei ist der Kerbfilter in der Nullposition $\varphi=0$ um $\ang{90}$ gegen den Strahlengang gedreht. Die weiteren Drehwinkel sind als Drehung gegen die Nullposition gemessen und aufgrund der Messung mittels Millimeterpapier stark Messunsicherheitsbehaftet ($\delta \varphi=\pm \ang{1}$). Durch die Drehung des Kerbfilters (Dünnschichtfilter) vergrößert sich die vom Licht zu transmittierende Schichtdicke und damit verschieben sich die geblockten Wellenlängen zu kleineren Werten. Hierbei ist die Verschiebung nach einfacher Geometrie unabhängig von der Drehrichtung. Die Breite des geblockten Wellenlängenintervalls wird in den folgenden Aalysen eine Rolle spielen.
-
-        \begin{figure}[tb]
+        \begin{figure}[htb]
           \centering
           \tikzsetnextfilename{kerbfilter}
           \begin{tikzpicture}
@@ -199,7 +195,10 @@
           \label{fig:kerbfilter-spektren}
         \end{figure}
 
+      \subsection{Kerbfilter}
+      \label{subsec:kerbfilter}
 
+        Um die Breite und Position des Wellenlängenbereichs, welchen der Kerbfilter blockt, zu messen, wird eine Handytaschenlampe als breitbandige Lichtquelle genutzt. \Cref{fig:kerbfilter-spektren} zeigt Spektren des Handys mit und ohne Kerbfilte im Strahlengang. Dabei ist der Kerbfilter in der Nullposition $\varphi=0$ um $\ang{90}$ gegen den Strahlengang gedreht. Die weiteren Drehwinkel sind als Drehung gegen die Nullposition gemessen und aufgrund der Messung mittels Millimeterpapier stark Messunsicherheitsbehaftet ($\delta \varphi=\pm \ang{1}$). Durch die Drehung des Kerbfilters (Dünnschichtfilter) vergrößert sich die vom Licht zu transmittierende Schichtdicke und damit verschieben sich die geblockten Wellenlängen zu kleineren Werten. Hierbei ist die Verschiebung nach einfacher Geometrie unabhängig von der Drehrichtung. Die Breite des geblockten Wellenlängenintervalls wird in den folgenden Analysen eine Rolle spielen, da neben dem Rayleigh-Maximum auch Raman-Linien unterdrückt werden. Wichtig an dieser Stelle ist, dass Flanken des Bereichs der unterdrückten Wellenlängen in \cref{fig:kerbfilter-spektren} sehr steil sind. So kommt es abseits des offensichtlichen Bereiches zu keinen Intensitätsänderungen der Linien.
 
 
     \section{Abschätzung der zu erwartenden Raman-Verschiebungen}
@@ -222,7 +221,7 @@
       \end{equation}
       Damit ergeben sich die in Tabelle \cref{tbl:theo-raman-versch} aufgeführten Raman-Verschiebungen für ausgewählte, in folgender Analyse relevanten, Atombindungen. Zur Berechnung wurden die in \cite{NIST_MASS} aufgeführten Atommassen verwendet.
 
-      \begin{table}[tb]
+      \begin{table}[htb]
       \caption[Theoretische Raman-Verschiebung verschiedener Atomkombinationen auf Grundlage des harmonischen Oszillator Modells unter Vorraussetzung der H-H-Bindungsenergie.]{Theoretische Raman-Verschiebung verschiedener Atomkombinationen auf Grundlage des harmonischen Oszillator Modells unter Vorraussetzung der H-H-Bindungsenergie. Die Werte wurden mit der Raman-Verschiebung einer H-H-Bindung $\nu_\mathrm{H-H}=\SI{4160}{\per\centi\meter}$ \cite{herzberg} und den in \cite{NIST_MASS} aufgeführten Atommassen nach \cref{eq:theo-raman-versch} berechnet.}
       \label{tbl:theo-raman-versch}
       \selectfontsize{10pt}
@@ -240,11 +239,13 @@
 
       In diesem Abschnitt werde die Spektren der betrachteten Chlormethane analysiert. Ziel ist die Zuordnung der auftretenden Raman-Linien zu den  Molekülschwingungen. Weiter wird mithilfe des eingeführten harmonischen Oszillator Modells die Veränderung der Raman-Linien bei Austauschen eines, oder mehrerer Atome in einem Molekül vorherzusagen versucht.
 
+      Die Messungen wurden mit Kerbfilter zur Unterdrückung des Rayleigh-Maximums und zusätzlich dem Polarisationsfilter zur Determinierung des Polarisationsgrades der Raman-Linien druchgeführt.
+
 
       \subsection{Tetrachlormethan}
       \label{subsec:tetrachlor}
 
-        \begin{figure}[tb]
+        \begin{figure}[htb]
           \subfloat[]{
             \tikzsetnextfilename{CCl4}
             \begin{tikzpicture}
@@ -297,6 +298,18 @@
           \label{fig:ccl4}
         \end{figure}
 
+        \begin{figure}[p]
+          \centering
+          \subfloat[]{
+            \includegraphics[width=0.8\textwidth]{figures/tetraeder.png}
+            \label{fig:tetraeder-schwingungen}}  \\
+          \subfloat[]{
+            \includegraphics[width=0.8\textwidth]{figures/ch3cl.png}
+            \label{fig:chcl3-schwingungen}}
+          \caption[Mögliche Schwingungen eines tetraedischen Moleküls.]{Mögliche Schwingungen eines tetraedischen Moleküls. \protect\subref{fig:tetraeder-schwingungen} zeigt die Schwingungen für ein $\mathrm{XY_4}$-Molekül, \protect\subref{fig:chcl3-schwingungen} die eines $\mathrm{CH_3Cl}$-Moleküls. Offenbar sind die Schwingungen der zweiten Zeile in \protect\subref{fig:tetraeder-schwingungen} energetisch entartet (vgl. \cref{subsec:tetrachlor}). \cite{herzberg}}
+          \label{fig:schwingungen}
+        \end{figure}
+
         \Cref{fig:ccl4} zeigt das Spektrum der Tetrachlormethan-Probe ($\mathrm{CCl_4}$) mit eingesetztem Polarisationsfilter. Der Winkel $\theta_\mathrm{pol}$ gibt hierbei den Drehwinkel des Polarisationsfilter an, wobei $\theta=\ang{0}$ die Nullpolarisationsstellung bezeichnet. Bei letzter Einstellung sind alle Raman-Maxima sichtbar, polarisierte zu symmetrischen Schwingungen gehörige und depolarisierte. Weiter liegt der Kerbfilter im Strahlengang, um das prominente Maximum der Rayleigh-Streuung zu schwächen. Da der Wellenlängenbereich, welcher durch den Kerbfilter unterdrückt wird, recht breit ist (vgl. \cref{subsec:kerbfilter}), verschwinden hierdurch auch die einige der Raman-Maxima auf der linken Seite (negative Raman-Verschiebung) des Rayleigh-Maximums. Da die Stokes- und Anti-Stokes-Maxima aber symmetrisch um das Rayleigh-Maximum verteilt liegen, reicht es für die Charakterisierung der Raman-Linien eine Seite zu betrachten.
         \medskip
 
@@ -312,25 +325,13 @@
         Weiter lässt sich die Streckschwingung eines C-Cl-Paares als Superposition der $\nu_{3i}$, $i\in\{ a,b,c\}$ darstellen. Für die Streckschwingung wurde in \cref{subsec:harm-oszi-absch} eine Raman-Verschiebung von $\nu_\mathrm{C-Cl}=\SI{988}{\per\centi\meter}$ abgeschätzt. Aufgrund des für die Abschätzung verwendeten vereinfachten Modells lässt sich hiermit die Zuordnung des Maximums bei $\sim \SI{777}{\per\centi\meter}$ zur den entarteten $\nu_{3i}$ Schwingungen aus \cref{fig:tetraeder-schwingungen}, trotz der großen Abweichung von über $\SI{200}{\per\centi\meter}$, rechtfertigen. Schließlich liegt wechselwirken bei der Überlagerung der Schwingungen mehr als nur die beiden für die Streckschwingung betrachteten Atome.
         \medskip
 
-        \begin{figure}[p]
-          \centering
-          \subfloat[]{
-            \includegraphics[width=0.8\textwidth]{figures/tetraeder.png}
-            \label{fig:tetraeder-schwingungen}}  \\
-          \subfloat[]{
-            \includegraphics[width=0.8\textwidth]{figures/ch3cl.png}
-            \label{fig:chcl3-schwingungen}}
-          \caption[Mögliche Schwingungen eines tetraedischen Moleküls.]{Mögliche Schwingungen eines tetraedischen Moleküls. \protect\subref{fig:tetraeder-schwingungen} zeigt die Schwingungen für ein $\mathrm{XY_4}$-Molekül, \protect\subref{fig:chcl3-schwingungen} die eines $\mathrm{CH_3Cl}$-Moleküls. Offenbar sind die Schwingungen der zweiten Zeile in \protect\subref{fig:tetraeder-schwingungen} energetisch entartet (vgl. \cref{subsec:tetrachlor}). \cite{herzberg}}
-          \label{fig:schwingungen}
-        \end{figure}
-
         Die verbleibenden beiden Schwingungen können an dieser Stelle noch nicht zugeordnet werden.
 
 
       \subsection{Chloroform und Deuterochloroform}
       \label{subsec:chloro-deutero}
 
-        \begin{figure}[tb]
+        \begin{figure}[p]
           \subfloat[]{
             \tikzsetnextfilename{CHCl3_CCL4}
             \begin{tikzpicture}
@@ -455,16 +456,7 @@
         Die Erwartung, dass die energetisch entarteten Schwingungen des $\mathrm{CCl_4}$-Moleküls durch das Ersetzen eines Cl-Atoms durch ein H-Atom aufgehoben würde, ist nur eingeschränkt erfüllt worden. Es ist ein zusätzliches Maximum zu beobachten, jedoch wären eigentlich noch mehr zu erwarten. Vermutlich sind diese von anderen Raman-Linien überlagert, sodass die zusätzlichen Linien mit dem Versuchsaufbau nicht aufgelöst werden können.
         \medskip
 
-        \Cref{fig:cdcl3} zeigt den Vergleich der Spektren von $\mathrm{CHCl_3}$ und $\mathrm{CDCl_3}$ bei Polarisationsfilter in Nullstellung. Das beim $\mathrm{CHCl_3}$-Molekül der C-H-Streckschwingung zugeordnete Maximum wird beim $\mathrm{CDCl_3}$-Molekül durch ein Maximum an der Stelle $\sim\SI{2249}{\per\centi\meter}$ ersetzt. Dies stimmt mit der für die C-D-Streckschwingung abgeschätze Raman-Verschiebung überein und kann wegen der Symmetrie der zugehörigen Schwingung (vgl. \cref{fig:cdcl3}), wie auch die C-H-Streckschwingung, der Schwingung $\nu_3$ aus \cref{fig:chcl3-schwingungen} zugeordnet werden. Die auftretende Verschiebung durch Ersetzen eines Wasserstoff-Atoms durch ein Isotop des Wasserstoff-Atoms nennt man \textit{Isotopen-Verschiebung}.
-
-        Die drei Maxima bei den kleinsten Raman-Verschiebungen werden sind bei beiden Spektren unverschoben. Dies zeigt, dass bei den zugehörigen Schwingungen das H- bzw. D-Atom eine vernachlässigbare Rolle spielen. Damit wird zunächst das Maximum bei $\sim\SI{366}{\per\centi\meter}$, in Einklang mit der vorherigen Zuordnung, als Schwingung $\nu_2$ identifiziert. Weiter erfüllen die Schwingungen $\nu_4$ und $\nu_5$ das Kriterium der prominenten Unabhängigkeit vom H-, bzw. D-Atom, womit die zu nicht-symmetrischen Schwingungen gehörenden Maxima von $\mathrm{CHCl_3}$, bzw. $\mathrm{CDCl_3}$ bei $\sim\SI{1208}{\per\centi\meter}$, bzw. $\sim\SI{902}{\per\centi\meter}$ der Schwingung $\nu_6$ zugeordnet werden können.
-
-        Die Maxima des $\mathrm{CDCl_3}$ Spektrums bei $\sim\SI{649}{\per\centi\meter}$ und $\sim \SI{739}{\per\centi\meter}$ werden analog zum $\mathrm{CHCl_3}$-Molekül $\nu_1$ und einer der verbleibenden beiden Schwingungend er zweiten Zeile von \cref{fig:chcl3-schwingungen} zugeordnet. Auffällig hierbei ist die Verschiebung um $\sim\SI{10}{\per\centi\meter}$ zu einer kleineren Raman-Verschiebung durch das Ersetzen des H- durch ein D-Atom. Dieses Phänomen ist Teil der oben eigneführten \textit{Isotopen-Verschiebung}.
-        \medskip
-
-        Die gesamte Zurodnung der der Maxima der beiden Moleküle ist in \cref{tbl:chcl3-cdcl3} aufgeführt.
-
-        \begin{table}[tb]
+        \begin{table}[htb]
         \caption[Zuordnung der Maxima der Spektren von $\mathrm{CHCl_3}$ und $\mathrm{CDCl_3}$ zu den zugehörigen Molekülschwingungen.]{Zuordnung der Maxima der Spektren von $\mathrm{CHCl_3}$ und $\mathrm{CDCl_3}$ zu den zugehörigen Molekülschwingungen. Die Herleitung der Zuordnung ist in \cref{subsec:chloro-deutero} beschrieben, die Bezeichnungen der Schwingungen aus \cref{fig:schwingungen} entnommen.}
         \label{tbl:chcl3-cdcl3}
         \selectfontsize{10pt}
@@ -483,6 +475,15 @@
         \end{tabu}
         \end{table}
 
+        \Cref{fig:cdcl3} zeigt den Vergleich der Spektren von $\mathrm{CHCl_3}$ und $\mathrm{CDCl_3}$ bei Polarisationsfilter in Nullstellung. Das beim $\mathrm{CHCl_3}$-Molekül der C-H-Streckschwingung zugeordnete Maximum wird beim $\mathrm{CDCl_3}$-Molekül durch ein Maximum an der Stelle $\sim\SI{2249}{\per\centi\meter}$ ersetzt. Dies stimmt mit der für die C-D-Streckschwingung abgeschätze Raman-Verschiebung überein und kann wegen der Symmetrie der zugehörigen Schwingung (vgl. \cref{fig:cdcl3}), wie auch die C-H-Streckschwingung, der Schwingung $\nu_3$ aus \cref{fig:chcl3-schwingungen} zugeordnet werden. Die auftretende Verschiebung durch Ersetzen eines Wasserstoff-Atoms durch ein Isotop des Wasserstoff-Atoms nennt man \textit{Isotopen-Verschiebung}.
+
+        Die drei Maxima bei den kleinsten Raman-Verschiebungen werden sind bei beiden Spektren unverschoben. Dies zeigt, dass bei den zugehörigen Schwingungen das H- bzw. D-Atom eine vernachlässigbare Rolle spielen. Damit wird zunächst das Maximum bei $\sim\SI{366}{\per\centi\meter}$, in Einklang mit der vorherigen Zuordnung, als Schwingung $\nu_2$ identifiziert. Weiter erfüllen die Schwingungen $\nu_4$ und $\nu_5$ das Kriterium der prominenten Unabhängigkeit vom H-, bzw. D-Atom, womit die zu nicht-symmetrischen Schwingungen gehörenden Maxima von $\mathrm{CHCl_3}$, bzw. $\mathrm{CDCl_3}$ bei $\sim\SI{1208}{\per\centi\meter}$, bzw. $\sim\SI{902}{\per\centi\meter}$ der Schwingung $\nu_6$ zugeordnet werden können.
+
+        Die Maxima des $\mathrm{CDCl_3}$ Spektrums bei $\sim\SI{649}{\per\centi\meter}$ und $\sim \SI{739}{\per\centi\meter}$ werden analog zum $\mathrm{CHCl_3}$-Molekül $\nu_1$ und einer der verbleibenden beiden Schwingungend er zweiten Zeile von \cref{fig:chcl3-schwingungen} zugeordnet. Auffällig hierbei ist die Verschiebung um $\sim\SI{10}{\per\centi\meter}$ zu einer kleineren Raman-Verschiebung durch das Ersetzen des H- durch ein D-Atom. Dieses Phänomen ist Teil der oben eigneführten \textit{Isotopen-Verschiebung}.
+        \medskip
+
+        Die gesamte Zurodnung der der Maxima der beiden Moleküle ist in \cref{tbl:chcl3-cdcl3} aufgeführt.
+
 
       \subsection{Dichlormethan}
 
@@ -490,7 +491,7 @@
 
         Weiter erscheint bei $\sim\SI{2830}{\per\centi\meter}$ ein bisher nicht bebachtetes vollständig polarisiertes Maximum. Die restliche Maxima verschieben im Bereich der Raman-Verschiebung $\Delta \nu < \SI{1500}{\per\centi\meter}$ verschieben sich. Sichtbar ist, dass die C-Cl-Streckschwingung weiter bestehen bei $\sim\SI{705}{\per\centi\meter}$ als fast vollständig polarisiertes Maximum bestehen bleibt ($\nu_3$ in \cref{fig:ch2cl2-schwingungen}). Da Streckschwingungen hochenergetischer als Biegeschwingungen sind kann so geschlossen werden, dass die C-$\mathrm{Cl_2}$-Vibrationen bei niedrigeren Raman-Verscheibungen zu finden sein müssen. Jedoch bleibt nur ein teilweise depolarisiertes Maximum bei $\sim\SI{282}{\per\centi\meter}$ im aufgenommenen Spektrum, während zwei Vibrationen zu zuzuordnen sind.
 
-        \begin{figure}
+        \begin{figure}[p]
           \centering
           \subfloat[]{
           \tikzsetnextfilename{CHCl3_CH2Cl2}
@@ -548,7 +549,7 @@
             \end{tikzpicture}
             \label{fig:ch2cl2}
           } \\
-          \subfloat{
+          \subfloat[]{
             \includegraphics[width=0.8\textwidth]{figures/ch2cl2.png}
             \label{fig:ch2cl2-schwingungen}
           }
@@ -559,30 +560,7 @@
 
     \section{Kohlenstoffringe}
 
-      \begin{figure}[tb]
-        \subfloat[]{
-          \chemfig{H-C*6(=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)}
-          \label{fig:c6h6-molecule}
-        }
-        \subfloat[]{
-          \chemfig{C(-[::210]H)(-[::150]H)*6(-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-)}
-          \label{fig:c6h12-molecule}
-        }
-        \subfloat[]{
-          \chemfig{N(=[::210]O)(-[::150]O)-C*6(=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)}
-          \label{fig:c6h5no2-molecule}
-        }
-        \caption[Molekülstrukturen der untersuchten Kohlenstoffringe.]{Molekülstrukturen der untersuchten Kohlenstoffringe. \protect\subref{fig:c6h6-molecule} Benzolring ($\mathrm{C_6H_6}$) \protect\subref{fig:c6h12} Cyclohexan ($\mathrm{C_6H_{12}}$) \protect\subref{fig:c6h5no2-molecule} Nitrobenzol ($\mathrm{C_6H_5NO_2}$)}
-        \label{fig:kohlenstoffringe-molekuele}
-      \end{figure}
-
-      Die Molekülstrukturen der untersuchten Kohlenstoffringe Benzol ($\mathrm{C_6H_6}$), Cyclohexan ($\mathrm{C_6H_{12}}$) und Nitrobenzol ($\mathrm{C_6H_5NO_2}$) sind in \cref{fig:kohlenstoffringe-molekuele} dargestellt. Der bei jedem der Moleküle auftretenden innere Kohlenstoffring lässt eine starke Raman-Linie bei entsprechend der C-C-Streckschwingung bei $\SI{1206}{\per\centi\meter}$ (vgl. \cref{subsec:harm-oszi-absch}) erwarten. Weiter enthalten alle Moleküle mindestens fünf C-H-Bindungen, sodass außerdem deren Streckschwingung als Maximum in den Spektren bei $\SI{3063}{per\centi\meter}$ (vgl. \cref{subsec:harm-oszi-absch}) zu erwarten ist.
-
-      Die aufgenommenen Spektren sind in \cref{fig:ringe} abgebildet. Sowohl für $\mathrm{C_6H_6}$, als auch für $\mathrm{C_6H_5NO_2}$ sind die die Raman-Linie der C-H-Streckschwingung an erwarteter Stelle zu finden. Lediglich beim $\mathrm{C_6H_{12}}$-Molekül treten anstelle der einzelnen Linie zwei, zu etwas kleineren Raman-Verschiebungen verschobene, Maxima auf. Mit einem Abstand von $\Delta \Delta \nu \approx \SI{80}{\per\centi\meter}$ sind diese gerade noch auflösbar und können als die beiden Streckschwingungen der $\mathrm{CH_2}$-Moleküle identifiziert werden.
-
-      Da die C-H-Streckschwingung symmetrisch ist, muss das Maximum stark polarisiert sein. Enstprechend werden die Maxima des Benzolrings bei $\sim\SI{994}{\per\centi\meter}$, des Cyclohexanrings bei $\sim\SI{801}{\per\centi\meter}$ und des Nitrobenzolrings bei $\sim\SI{1003}{\per\centi\meter}$ dieser Schwingung zugeordnet. Bei letzter ist nicht auszuschließen, dass einer der anderen Maxima in diesem Bereich der Raman-Verschiebung der Richtige ist, da alle größteteils polarisiert sind. Jedoch ist die Molekularstruktur derer von Benzol so ähnlich, dass eine äquivalente Raman-Verschiebung zu erwarten ist. Die zugeordnete Streckschwingung wird als Streckung des Rings bezeichnet, da bei gleichphasigem Schwingen der C-C-Bindungen der Durchmesser des Rings ändert.
-
-      \begin{figure}[tb]
+      \begin{figure}[p]
         \centering
         \subfloat[]{
         \tikzsetnextfilename{C6H6}
@@ -666,16 +644,37 @@
             \end{axis}
           \end{tikzpicture}
           \label{fig:c6h5no2}
+        } \\
+        \subfloat[]{
+          \chemfig{H-C*6(=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)}
+          \label{fig:c6h6-molecule}
         }
-        \caption[Spektren der Kohlenstoffwasserstoff-Ringe und exemplarische Struktur eines Benzolrings.]{Spektren der Kohlenstoffwasserstoff-Ringe \protect\subref{fig:c6h6} $\mathrm{C_6H_6}$, \protect\subref{fig:c6h12} $\mathrm{C_6H_{12}}$, \protect\subref{fig:c6h5no2} $\mathrm{C_6H_5NO_2}$. }
+        \subfloat[]{
+          \chemfig{C(-[::210]H)(-[::150]H)*6(-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-C(-[::-90]H)(-[::-30]H)-)}
+          \label{fig:c6h12-molecule}
+        }
+        \subfloat[]{
+          \chemfig{N(=[::210]O)(-[::150]O)-C*6(=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)}
+          \label{fig:c6h5no2-molecule}
+        }
+        \caption[Spektren der Kohlenstoffwasserstoff-Ringe und deren molekulare Struktur.]{Spektren der Kohlenstoffwasserstoff-Ringe \protect\subref{fig:c6h6} $\mathrm{C_6H_6}$ (\protect\subref{fig:c6h6-molecule}), \protect\subref{fig:c6h12} $\mathrm{C_6H_{12}}$ (\protect\subref{fig:c6h12-molecule}), \protect\subref{fig:c6h5no2} $\mathrm{C_6H_5NO_2}$ (\protect\subref{fig:c6h5no2-molecule}). }
         \label{fig:ringe}
       \end{figure}
+      Die Messungen der Kohlenstoffringe erfolgten analog zu denen der Chlormethane.
+
+      Die Molekülstrukturen der untersuchten Kohlenstoffringe Benzol ($\mathrm{C_6H_6}$), Cyclohexan ($\mathrm{C_6H_{12}}$) und Nitrobenzol ($\mathrm{C_6H_5NO_2}$) sind in \cref{fig:ringe} dargestellt. Der bei jedem der Moleküle auftretenden innere Kohlenstoffring lässt eine starke Raman-Linie bei entsprechend der C-C-Streckschwingung bei $\SI{1206}{\per\centi\meter}$ (vgl. \cref{subsec:harm-oszi-absch}) erwarten. Weiter enthalten alle Moleküle mindestens fünf C-H-Bindungen, sodass außerdem deren Streckschwingung als Maximum in den Spektren bei $\SI{3063}{per\centi\meter}$ (vgl. \cref{subsec:harm-oszi-absch}) zu erwarten ist.
+
+      Die aufgenommenen Spektren sind in \cref{fig:ringe} abgebildet. Sowohl für $\mathrm{C_6H_6}$, als auch für $\mathrm{C_6H_5NO_2}$ sind die die Raman-Linie der C-H-Streckschwingung an erwarteter Stelle zu finden. Lediglich beim $\mathrm{C_6H_{12}}$-Molekül treten anstelle der einzelnen Linie zwei, zu etwas kleineren Raman-Verschiebungen verschobene, Maxima auf. Mit einem Abstand von $\Delta \Delta \nu \approx \SI{80}{\per\centi\meter}$ sind diese gerade noch auflösbar und können als die beiden Streckschwingungen der $\mathrm{CH_2}$-Moleküle identifiziert werden.
+
+      Da die C-H-Streckschwingung symmetrisch ist, muss das Maximum stark polarisiert sein. Enstprechend werden die Maxima des Benzolrings bei $\sim\SI{994}{\per\centi\meter}$, des Cyclohexanrings bei $\sim\SI{801}{\per\centi\meter}$ und des Nitrobenzolrings bei $\sim\SI{1003}{\per\centi\meter}$ dieser Schwingung zugeordnet. Bei letzter ist nicht auszuschließen, dass einer der anderen Maxima in diesem Bereich der Raman-Verschiebung der Richtige ist, da alle größteteils polarisiert sind. Jedoch ist die Molekularstruktur derer von Benzol so ähnlich, dass eine äquivalente Raman-Verschiebung zu erwarten ist. Die zugeordnete Streckschwingung wird als Streckung des Rings bezeichnet, da bei gleichphasigem Schwingen der C-C-Bindungen der Durchmesser des Rings ändert.
 
       \Cref{fig:ringe} zeigt die Spektrend er zyklischen Kohlenstoffwasserstoff-Ringe Benzol ($\mathrm{C_6H_6}$), Cyclohexan ($\mathrm{C_6H_{12}}$) und Nitrobenzol ($\mathrm{C_6H_5NO_2}$).
 
 
   \section{Temperaturbestimmung von kristallinem Schwefel}
   \label{sec:schwefel}
+
+    Ab hier ist der Polarisationsgrad der Raman-Linien nicht mehr von Interesse, weshalb alle folgenden Messungen mit Polarisationsfilter in Nullstellung durchgeführt wurden.
 
     Durch das Verhältnis der Zählraten von Stokes- und Anti-Stokes-Maximum der prominenten Eigenschwingung von Schwefel soll hier die Temperatur des kristallinen Schwefels bestimmt werden. Dazu werden die Maxima bei $\sim\pm\SI{470}{\per\centi\meter}$ des in \cref{fig:schwefel} betrachtet. Aufgrund der Breite der Maxima und des Umstandes, dass das Rayleigh-Maximum nicht genau auf $\nu=\SI{0}{\per\centi\meter}$ liegt, wird ein Fehler von
     \begin{equation*}
@@ -708,7 +707,7 @@
 
     Das Ergebnis stimmt außerdem mit der Raumtemperatur, welche erfahrungsgemäß in den Räumlichkeiten bei ungefähr $T_\mathrm{Raum}=\SI{22}{\celsius}$ liegt, überein.
 
-    \begin{figure}
+    \begin{figure}[htb]
       \centering
       \tikzsetnextfilename{schwefel}
       \begin{tikzpicture}
@@ -739,7 +738,7 @@
   \section{Bestimmung eines Ethanol-Wasser-Mischungsverhältnisses}
   \label{sec:ethanol}
 
-    \begin{figure}[tb]
+    \begin{figure}[htb]
       \centering
       \subfloat[]{
         \tikzsetnextfilename{ethanol_vgl}
@@ -822,6 +821,15 @@
       \frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}=\SI{0,05126(484)}{\percent}+\SI{2,1181(135)}{\percent}\cdot c_\mathrm{Ethanol}
     \end{equation*}
     an der Stelle $\frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}=0,6654$. Da die Fehler der Regressionsparameter viel zu gering sind, um die Messunsicherheiten des Experiments wiederzuspiegeln, wurde hier auf eine Fehlerfortpflanzung verzichtet. Eine Variation des Zählratenverhältnisses $\frac{N_\mathrm{Ethanol}}{N_\mathrm{Wasser}}$ führt zu einer Abweichung von $\sim \pm\SI{3}{\percent}$, während eine mögliche Abweichung des angenommenen Wasseranteil im Ethanol sich im Ergebnis kaum bemerkbar macht.
+    Der Abweichung von den anfänglich angenommenen $\SI{40}{\percent}$ könnte die Nichtlinearität von Zählratenverhältnis und Ethanolkonzentration zugrunde liegen.
+
+
+  \section{Fazit}
+
+    Bei allen Messungen konnten die prominenten charakteristischen Merkmale der Spektren der Moleküle beobachtet werden. Weiter wurden lediglich simple Molekülstrukturen betrachtet. Trotzdem war die Zuordnung der Maxima in den Spektren zu Schwingungen der Moleküle lediglich anhand der Raman-Spektroskopie schwierig und nicht immer eindeutig. Dies liegt nicht zuletzt an der Linienbreite der Maxima. Vor Allem durchDopplerverbreiterung eng beieinanderliegender Maxima waren ebenjene nicht auflösbar (der engste aufgelöste Abstand wwährend des Experiments war $\SI{80}{\per\centi\meter}$). Durch eine dopplerfreie Messung könnte das Auflösungsvermögen des Experiments signifikant verbessert werden.
+
+    Dank der Abschätzung mittels dem Modell des harmonischen Oszillators für Streckschwingungen konnten aber die auftretenden Streckschwingungen zweier Nachbaratome in den Molekülen fast immer zugeordnet werden. Lediglich bei vielen dicht beieinanderliegenden Maxima und weiterer, mit dem Atompaar wechselwirkenden Atomen, welche für eine Verschiebung sorgten, war die Zuordnung nicht eindeutig.
+
 
 
 

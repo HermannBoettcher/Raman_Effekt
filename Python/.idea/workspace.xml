@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2820fde2-887e-4464-9ae6-560b4dfe2e60" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Latex/kapitel/versuchsauswertung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Latex/kapitel/versuchsauswertung.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ehtanol.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/ehtanol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ethanol_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/ethanol_data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ethanol_wasser_40000.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ethanol_wasser_40000.txt" afterDir="false" />
-    </list>
+    <list default="true" id="2820fde2-887e-4464-9ae6-560b4dfe2e60" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +139,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1525" />
     <option name="width" value="1600" />
     <option name="height" value="900" />
   </component>
@@ -327,14 +321,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="872" extended-state="6" />
+    <frame x="1920" y="0" width="1600" height="900" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29930246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24722221" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23796791" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
